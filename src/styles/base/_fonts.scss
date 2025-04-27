@@ -1,0 +1,296 @@
+@use './tokens' as *;
+@use './mediaqueries' as  mq;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin Headline__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-002;
+	font-weight: $font-weight-000;
+	letter-spacing: -0.5%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-002;
+	}
+	@include mq.media-medium{
+		font-size: $font-size-001;
+	}
+	@include mq.media-large{
+		font-size: $font-size-000;
+	}
+}
+@mixin Headline__01-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-002;
+	font-weight: $font-weight-001;
+	letter-spacing: -0.5%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-002;
+	}
+	@include mq.media-medium{
+		font-size: $font-size-001;
+	}
+	@include mq.media-large{
+		font-size: $font-size-000;
+	}
+}
+@mixin Headline__01-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-002;
+	font-weight: $font-weight-002;
+	letter-spacing: -0.5%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-002;
+	}
+	@include mq.media-medium{
+		font-size: $font-size-001;
+	}
+	@include mq.media-large{
+		font-size: $font-size-000;
+	}
+}
+@mixin Headline__02-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-000;
+	letter-spacing: 0%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-002;
+	}
+	@include mq.media-medium{
+		font-size: $font-size-001;
+	}
+}
+@mixin Headline__02-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-001;
+	letter-spacing: 0%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-001;
+	}
+}
+@mixin Headline__02-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-002;
+	letter-spacing: 0%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+	@include mq.media-medium{
+		font-size: $font-size-002;
+	}
+}
+@mixin Headline__03-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.25%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+}
+@mixin Headline__03-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-001;
+	letter-spacing: 0.25%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+}
+@mixin Headline__03-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-002;
+	letter-spacing: 0.25%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+}
+@mixin Headline__03-Black {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-003;
+	letter-spacing: 0.25%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+}
+@mixin Headline__04-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-000;
+	letter-spacing: 0%;
+	text-transform: none;
+}
+@mixin Headline__04-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-001;
+	letter-spacing: 0%;
+	text-transform: none;
+	@include mq.media-small{
+		font-size: $font-size-003;
+	}
+}
+@mixin Headline__04-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-002;
+	letter-spacing: 0%;
+	text-transform: none;
+}
+@mixin Headline__04-Black {
+	font-family: $font-family-000;
+	font-size: $font-size-003;
+	font-weight: $font-weight-003;
+	letter-spacing: 0%;
+	text-transform: none;
+}
+@mixin Headline__05-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Headline__05-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-001;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Headline__05-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-002;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Headline__05-Black {
+	font-family: $font-family-000;
+	font-size: $font-size-004;
+	font-weight: $font-weight-003;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Subtitle__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Subtitle__01-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-001;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Subtitle__01-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-002;
+	letter-spacing: 0.15000000596046448%;
+	text-transform: none;
+}
+@mixin Subtitle__02-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-006;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.10000000149011612%;
+	text-transform: none;
+}
+@mixin Subtitle__02-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-006;
+	font-weight: $font-weight-001;
+	letter-spacing: 0.10000000149011612%;
+	text-transform: none;
+}
+@mixin Subtitle__02-Bold {
+	font-family: $font-family-000;
+	font-size: $font-size-006;
+	font-weight: $font-weight-002;
+	letter-spacing: 0.10000000149011612%;
+	text-transform: none;
+}
+@mixin Body__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.5%;
+	line-height: 129.99999523162842%;
+	text-transform: none;
+	@include mq.media-medium{
+		font-size: $font-size-004;
+	}
+}
+@mixin Body__02-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-005;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.25%;
+	line-height: 135.0000023841858%;
+	text-transform: none;
+	@include mq.media-medium{
+		font-size: $font-size-004;
+	}
+}
+@mixin Button__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-006;
+	font-weight: $font-weight-001;
+	letter-spacing: 1.25%;
+	text-transform: none;
+}
+@mixin Button__01-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-006;
+	font-weight: $font-weight-002;
+	letter-spacing: 1.25%;
+	text-transform: none;
+}
+@mixin Caption__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-007;
+	font-weight: $font-weight-000;
+	letter-spacing: 0.4000000059604645%;
+	line-height: 124.18750524520874%;
+	text-transform: none;
+}
+@mixin Caption__01-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-007;
+	font-weight: $font-weight-001;
+	letter-spacing: 0.4000000059604645%;
+	text-transform: none;
+}
+@mixin Overline__01-Regular {
+	font-family: $font-family-000;
+	font-size: $font-size-008;
+	font-weight: $font-weight-000;
+	letter-spacing: 1.5%;
+	line-height: 122.18749523162842%;
+	text-transform: none;
+}
+@mixin Overline__01-Medium {
+	font-family: $font-family-000;
+	font-size: $font-size-008;
+	font-weight: $font-weight-001;
+	letter-spacing: 1.5%;
+	text-transform: none;
+}

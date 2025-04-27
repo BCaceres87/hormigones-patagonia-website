@@ -1,0 +1,30 @@
+@forward './fonts';
+@forward './colors';
+@forward './mediaqueries';
+@forward './tokens';
+@forward './layout';
+
+  @mixin debug{
+    border: 5px solid red;
+    @include media-xsmall{
+      border-color: yellow;
+    }
+    @include media-small{
+      border-color:  orange;
+    }
+    @include media-medium{
+      border-color:  green;
+    }
+    @include media-large{
+      border-color:  turquoise;
+    }
+    @include media-xlarge{
+      border-color:  blue;
+    }
+    @include media-xxlarge{
+      border-color:  purple;
+    }
+    @include media-xxxlarge{
+      border-color:  black;
+    }
+  }

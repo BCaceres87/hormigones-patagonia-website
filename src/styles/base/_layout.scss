@@ -1,0 +1,27 @@
+@forward './tokens';
+@use './mediaqueries' as *;
+
+@mixin wrapper{
+	box-sizing: border-box;
+	padding: 0 0.5rem; 
+	width: 100%;
+	@include media-xsmall{
+		padding: 0 1rem;
+	}
+	@include media-small{
+		padding: 0 2rem;
+	}
+	@include media-medium{
+		padding: 0 2.5rem;
+	}
+	@include media-large{
+		padding: 0 4rem;
+	}
+	@include media-xlarge{
+	}
+	@include media-xxlarge{}
+	@include media-xxxlarge{}
+}
+@mixin shadow{
+	box-shadow: 6px 6px 40px rgba(199, 185, 255, 0.3);
+}

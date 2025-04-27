@@ -1,0 +1,85 @@
+@use "./styles/main.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
+	margin: 0;
+  padding: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.App {
+	align-items: center;
+	color: $grey-900;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+	a {
+		color: inherit; 
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	b {
+		font-weight: $font-weight-002;
+	}
+
+	h1 {
+		@include Headline__01-Bold;				
+	}
+
+	h2 {
+		@include Headline__02-Regular;
+	}
+
+	h3 {
+		@include Headline__03-Regular;
+	}
+
+	h4 {
+		@include Headline__04-Regular;
+	}
+
+	h5 {
+		@include Headline__05-Medium;
+	}
+
+	p {
+		font-size: $font-size-005;
+		@include media-xsmall{
+			@include Body__01-Regular; 
+		}
+	}
+
+	small {
+		@include Caption__01-Regular;
+	}
+
+	span {
+		@include Subtitle__01-Bold;
+	}
+
+	.content_wrapper {
+		align-items: center;
+		display: flex;
+		justify-content: space-between; 
+		padding: 10%;
+	}
+}
+
+section, h1, h2, h3, p {
+  margin-top: 0;
+}

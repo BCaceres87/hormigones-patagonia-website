@@ -1,0 +1,50 @@
+@use '../styles/main.scss' as *;
+
+.logo {
+	width: 8rem;
+}
+
+.nav_bar {
+	align-items: center;
+	// background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	color: #FFFFFF;
+	flex-direction: row;
+	display: flex;
+	height: 10rem;
+	justify-content: space-between;
+	padding: 0 4rem;
+	position: fixed;
+	top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+	width: 100%;
+	section, h1, h2, h3, p {
+		margin-top: 0;
+	}
+
+	ul {
+		display: none;
+		@include media-large {
+			display: flex;
+			list-style: none;
+			align-items: center;
+			justify-content: space-around;
+			width: 30%;
+		}
+		li {
+			text-decoration: none;
+		}
+	}	
+
+	.toggle_menu {
+		display: block; 
+		font-size: 2rem;
+		cursor: pointer;
+		@include media-large {
+			display: none; 
+		}
+  }
+}

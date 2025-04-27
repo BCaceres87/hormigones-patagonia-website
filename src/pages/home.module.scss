@@ -1,0 +1,58 @@
+.container {
+  align-items: flex-start;
+  background-image: url('../assets/images/bg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // padding-top: 10rem; 
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Capa oscura, puedes ajustar el 0.5 para más o menos oscuridad
+    z-index: 1;
+  }
+
+  .text_wrapper {
+    width: 40%;
+    z-index: 2;
+    padding: 0 4rem;
+    position: relative;
+  }
+
+  .buttons_wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .primary_button {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .secondary_button {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
