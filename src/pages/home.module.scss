@@ -1,4 +1,10 @@
+@use "../styles/main.scss" as *;
+
 .container {
+  @include wrapper;
+}
+
+.section1 {
   align-items: flex-start;
   background-image: url('../assets/images/bg1.jpeg');
   background-size: cover;
@@ -7,7 +13,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // padding-top: 10rem; 
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -26,7 +31,6 @@
   .text_wrapper {
     width: 40%;
     z-index: 2;
-    padding: 0 4rem;
     position: relative;
   }
 
@@ -40,7 +44,6 @@
       color: #000000;
       border: none;
       padding: 0.8rem 1.5rem;
-      font-weight: bold;
       border-radius: 0.5rem;
       cursor: pointer;
     }
@@ -48,11 +51,34 @@
     .secondary_button {
       background-color: transparent;
       color: #ffffff;
-      border: 2px solid #ffffff;
+      border: 1px solid #ffffff;
       padding: 0.8rem 1.5rem;
-      font-weight: bold;
       border-radius: 0.5rem;
       cursor: pointer;
     }
+  }
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  row-gap: 3rem;
+  text-align: center;
+
+  .logos_wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  text-align: center;
+  .cards_wrapper {
+    display: flex;
+    justify-content: space-around;
   }
 }

@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  width: 25%;
+  .image_wrapper {
+    height: 52%;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    a {
+      font-weight: bold;
+    }
+  }
+}
