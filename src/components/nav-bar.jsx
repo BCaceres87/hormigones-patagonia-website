@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
-import Logo from '../assets/logo/logo_sin_fondo.png'
+import Logo from '../assets/logo/logo_navbar.png'
 import styles from './nav-bar.module.scss'
 
 const NavBar = () => {
+  const navigate = useNavigate();
 	const [showMenu, setShowMenu] = useState(false);
 	const classNameMenu = classNames(`${styles.nav_bar}`, {
 		[styles.show]: !showMenu,
@@ -27,7 +28,7 @@ const NavBar = () => {
         offset={50}
         duration={500}
       >
-        {/* <img className={styles.logo} alt="Patagonia Logo" src={Logo}/> */}
+        <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
       <ul className={styles.list}>
         <li className={styles.list_element}>
@@ -39,7 +40,7 @@ const NavBar = () => {
             offset={50}
             duration={500}
           >
-            <span className={styles.text}>Home</span>
+            Home
           </Link>
         </li>
         <li className={styles.list_element}>
@@ -51,7 +52,7 @@ const NavBar = () => {
             offset={50}
             duration={500}
           >
-            <span className={styles.text}>Proyectos</span>
+            Proyectos
           </Link>
         </li>
         <li className={styles.list_element}>
@@ -63,7 +64,7 @@ const NavBar = () => {
             offset={50}
             duration={500}
           >
-            <span className={styles.text}>Servicios</span>
+            Servicios
           </Link>
         </li>
         <li className={styles.list_element}>
@@ -75,20 +76,21 @@ const NavBar = () => {
             offset={50}
             duration={500}
           >
-            <span className={styles.text}>Nosotros</span>
+            Nosotros
           </Link>
         </li>
         <li className={styles.list_element}>
-          <Link
+          <button
             activeclass="active"
-            to='/contact'
             spy={true}
             smooth={true}
             offset={50}
             duration={500}
+            onClick={() => navigate('/contact')}
+            className={styles.contact_button}
           >
-            <span className={styles.text}>Contacto</span>
-          </Link>
+            Contacto
+          </button>
         </li>
       </ul>
       <div className={styles.toggle_menu} onClick={menuToggle}>
