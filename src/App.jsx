@@ -1,18 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
-import NavBar from './components/nav-bar'
 import styles from './App.module.scss'
 import Projects from './pages/projects'
 import Services from './pages/services'
 import About from './pages/about'
 import Contact from './pages/contact'
+import Layout from './components/layout'
 
-function App() {
-
+export const App = () => {
   return (
-   <div className={styles.App}>
-     <NavBar/>
-    <div className={styles.App}>
+   <div className={styles.app}>
+    <Layout>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
@@ -20,7 +18,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
-    </div>
+    </Layout>
    </div>
   )
 }
