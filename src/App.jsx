@@ -6,6 +6,7 @@ import Services from './pages/services'
 import About from './pages/about'
 import Contact from './pages/contact'
 import Layout from './components/layout'
+import TermsAndConditions from './pages/terms-and-conditions'
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path="/services" element={<Services/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
       </Routes>
     </Layout>
    </div>
