@@ -25,3 +25,19 @@
 @mixin shadow{
 	box-shadow: 6px 6px 40px rgba(199, 185, 255, 0.3);
 }
+
+@mixin hero-text-spacing {
+  padding-top: 5rem;
+
+  @include media-medium {
+    padding-top: 7rem;
+  }
+
+  @include media-large {
+    padding-top: 9rem;
+  }
+
+  @include media-xlarge {
+    padding-top: 10rem;
+  }
+}
