@@ -1,40 +1,46 @@
 @use "./styles/main.scss" as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-  margin: 0;
+  // margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; 
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	height: 100%;
 	margin: 0;
+  overflow-x: hidden; 
   padding: 0;
+	width: 100%;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
-.App {
+.app {
 	align-items: center;
-	color: $grey-900;
+	color: $neutral-800;
 	display: flex;
 	flex-direction: column;
-	font-family: 'Roboto', sans-serif;
 	a {
 		color: inherit; 
 		cursor: pointer;
+		margin: 1rem 0;
 		text-decoration: none;
 	}
 
-	b {
+	b, strong {
 		font-weight: $font-weight-002;
+	}
+
+	button {
+		@include Button__01-Regular;
 	}
 
 	h1 {
@@ -42,23 +48,26 @@ button:focus {
 	}
 
 	h2 {
-		@include Headline__02-Regular;
+		@include Headline__02-Bold;
 	}
 
 	h3 {
-		@include Headline__03-Regular;
+		@include Headline__03-Bold;
 	}
 
 	h4 {
-		@include Headline__04-Regular;
+		@include Headline__04-Bold;
 	}
 
 	h5 {
-		@include Headline__05-Medium;
+		@include Headline__05-Bold;
+	}
+
+	button, li {
+		@include Caption__01-Regular;
 	}
 
 	p {
-		font-size: $font-size-005;
 		@include media-xsmall{
 			@include Body__01-Regular; 
 		}
@@ -66,10 +75,6 @@ button:focus {
 
 	small {
 		@include Caption__01-Regular;
-	}
-
-	span {
-		@include Subtitle__01-Bold;
 	}
 
 	.content_wrapper {
