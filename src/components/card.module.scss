@@ -1,9 +1,13 @@
+@use "../styles/main.scss" as *;
+
 .card {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   text-align: center;
-  width: 25%;
+  @include media-medium {
+    width: 30%;
+  }
+
   .image_wrapper {
     height: 52%;
     img {
@@ -16,9 +20,14 @@
   .text_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+
     a {
-      font-weight: bold;
+      font-weight: $font-weight-002;
+    }
+
+    span {
+      @include Caption__01-Regular;
+      margin: 1rem 0;
     }
   }
 }

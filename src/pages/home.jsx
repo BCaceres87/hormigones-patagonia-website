@@ -1,15 +1,19 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import styles from './home.module.scss'
 import Services from '../assets/images/card1.jpg'
 import Arid from '../assets/images/card2.jpg'
 import Cement from '../assets/images/card3.jpg'
+import Img1 from '../assets/images/image1.jpg'
 import Card from "../components/card"
 import Wrapper from "../components/wrapper"
+import { EnvironmentOutlined, MailOutlined, PhoneOutlined, RightOutlined } from "@ant-design/icons"
+import Layout from "../components/layout"
+import ContactForm from "../components/contact-form"
 
 const Home = () => {
   const navigate = useNavigate()
   return (
-    <div className={styles.container}>
+    <Layout>
       <section className={styles.section1}>
         <Wrapper>
           <div className={styles.text_wrapper}>
@@ -34,7 +38,7 @@ const Home = () => {
       </section>
       <section className={styles.section2}>
         <Wrapper>
-          <h5>Ellos ya confían en nosotros</h5>
+          <span className={styles.subtitle}>Ellos ya confían en nosotros</span>
           <div className={styles.logos_wrapper}>
             <img src="" alt="Cliente 1" />
             <img src="" alt="Cliente 2" />
@@ -46,7 +50,7 @@ const Home = () => {
       </section>
       <section className={styles.section3}>
        <Wrapper>
-         <h2>Nuestros servicios: materiales y maquinaria para construcción de calidad</h2>
+         <h3>Nuestros servicios: materiales y maquinaria para construcción de calidad</h3>
          <div className={styles.cards_wrapper}>
            <Card
              image={Services}
@@ -72,7 +76,40 @@ const Home = () => {
          </div>
        </Wrapper>
       </section>
-    </div>
+      <section className={styles.section4}>
+       <Wrapper>
+        <div className={styles.content_wrapper}>
+           <img src={Img1} alt="Imagen camión" />
+           <div className={styles.text_wrapper}>
+             <h2>Confiabilidad en cada proyecto de construcción</h2>
+             <p>
+               En Hormigones Patagonia, nuestra misión es proporcionar materiales de construcción de la más alta calidad, asegurando entregas puntuales y un servicio al cliente excepcional. Nuestra visión es ser la empresa líder en el sector, reconocida por nuestra integridad y compromiso con la satisfacción del cliente.
+             </p>
+             <Link to="">Saber más <RightOutlined /></Link>
+           </div>
+        </div>
+       </Wrapper>
+      </section>
+      <section className={styles.section5}>
+       <Wrapper>
+        <div className={styles.content_wrapper}>
+          <div>
+             <span>
+               Cotiza con nosotros
+             </span>
+             <h2>
+               Contáctanos
+             </h2>
+             <p>Estamos aquí para ayudarte</p>
+             <span className={styles.data_text}><MailOutlined /> hello@hormigonespatagonia.cl</span>
+             <span className={styles.data_text}><PhoneOutlined /> +56 9 1234 5678</span>
+             <span className={styles.data_text}><EnvironmentOutlined /> 123 Calle Ejemplo, Santiago, Chile</span>
+          </div>
+            <ContactForm/>
+        </div>
+       </Wrapper>
+     </section>
+    </Layout>
   )
 }
 

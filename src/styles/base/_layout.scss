@@ -3,19 +3,19 @@
 
 @mixin wrapper{
 	box-sizing: border-box;
-	padding: 0 0.5rem; 
+	padding: 2rem 1.25rem;
 	width: 100%;
-	@include media-xsmall{
-		padding: 0 1rem;
-	}
-	@include media-small{
-		padding: 0 2rem;
-	}
+	// @include media-xsmall{
+	// 	padding: 0 1rem;
+	// }
+	// @include media-small{
+	// 	padding: 0 2rem;
+	// }
 	@include media-medium{
-		padding: 0 2.5rem;
+		padding: 3.5rem 2rem;
 	}
 	@include media-large{
-		padding: 0 4rem;
+		padding: 4rem 6rem;
 	}
 	@include media-xlarge{
 	}

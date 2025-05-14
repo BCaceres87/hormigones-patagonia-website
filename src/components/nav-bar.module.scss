@@ -1,10 +1,10 @@
 @use '../styles/main.scss' as *;
 
 .contact_button {
-	background-color: #76991A;
+	background-color: $trendy-green-300;
 	border: 0;
 	border-radius: 0.2rem;
-	color: #FFFFFF;
+	color: $neutral-100;
 	cursor: pointer;
 	padding: 0.5rem 0.8rem;
 }
@@ -18,7 +18,7 @@
 	// background-color: transparent;
 	background-color: rgba(0, 0, 0, 0.4);
 	box-sizing: border-box;
-	color: #FFFFFF;
+	color: $neutral-100;
 	flex-direction: row;
 	display: flex;
 	height: 6rem;
