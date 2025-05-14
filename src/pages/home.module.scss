@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 6rem);
   width: 100vw;
 
   &::before {
@@ -31,6 +31,7 @@
   .text_wrapper {
     z-index: 2;
     position: relative;
+    @include hero-text-spacing;
     @include media-medium {
       width: 40%;
     }

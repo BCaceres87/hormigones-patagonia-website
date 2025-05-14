@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const { TextArea } = Input;
 
@@ -89,6 +90,10 @@ const ContactForm = () => {
                   : Promise.reject('Ingresa 9 dígitos numéricos');
               },
             },
+            {
+              required: true,
+              message: 'El número de celular es requerido',
+            },
           ]}
         >
           <Input
@@ -112,8 +117,19 @@ const ContactForm = () => {
             className={styles.input}
           />
         </Form.Item>
-        <Form.Item name="remember" valuePropName="checked" label={null}>
-          <Checkbox>Acepto los Términos</Checkbox>
+        <Form.Item 
+          name="acceptTerms"
+          valuePropName="checked" 
+          label={null}
+          rules={[
+            {
+              validator: (_, value) =>
+                value ? Promise.resolve() : Promise.reject(new Error('Debes aceptar los términos y condiciones')),
+            },
+          ]}
+        >
+          <Checkbox>He leído y acepto los <Link to='/terms-and-conditions' className={styles.link}>Términos y condiciones</Link>
+          </Checkbox>
         </Form.Item>
       
         <Form.Item label={null}>

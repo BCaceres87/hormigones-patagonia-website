@@ -1,0 +1,17 @@
+@use "../styles/main.scss" as *;
+
+.buttons_wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.section1 {
+  .text_wrapper {
+    @include hero-text-spacing;
+    @include media-medium {
+      padding: 0 10rem;
+    }
+  }
+}
