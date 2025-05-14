@@ -101,9 +101,9 @@ const Home = () => {
                Contáctanos
              </h2>
              <p>Estamos aquí para ayudarte</p>
-             <span className={styles.data_text}><MailOutlined /> hello@hormigonespatagonia.cl</span>
-             <span className={styles.data_text}><PhoneOutlined /> +56 9 1234 5678</span>
-             <span className={styles.data_text}><EnvironmentOutlined /> 123 Calle Ejemplo, Santiago, Chile</span>
+             <span className={styles.data_text}><MailOutlined /> constructorahbspa@gmail.com</span>
+             <span className={styles.data_text}><PhoneOutlined /> +56 9 6628 3243</span>
+             <span className={styles.data_text}><EnvironmentOutlined /> Monte verde 0108, Valdivia, Chile</span>
           </div>
             <ContactForm/>
         </div>
