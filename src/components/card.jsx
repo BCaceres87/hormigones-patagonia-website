@@ -9,8 +9,8 @@ const Card = ({image, title, description, linkText, path}) => {
         <img src={image} alt="image1" />
       </div>
       <div className={styles.text_wrapper}>
-        <h4>{title}</h4>
-        <p>{description}</p>
+        <h5>{title}</h5>
+        <span>{description}</span>
         <Link to={path}>{linkText} <RightOutlined /></Link>
       </div>
     </div>

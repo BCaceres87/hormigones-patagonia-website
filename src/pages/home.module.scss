@@ -29,9 +29,11 @@
   }
 
   .text_wrapper {
-    width: 40%;
     z-index: 2;
     position: relative;
+    @include media-medium {
+      width: 40%;
+    }
   }
 
   .buttons_wrapper {
@@ -70,6 +72,10 @@
     display: flex;
     justify-content: space-around;
   }
+
+  .subtitle {
+    @include Subtitle__02-Bold;
+  }
 }
 
 .section3 {
@@ -77,8 +83,64 @@
   flex-direction: column;
   gap: 5rem;
   text-align: center;
+
   .cards_wrapper {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 3rem;
+    @include media-medium {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.section4 {
+  .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media-medium {
+      flex-direction: row;
+      gap: 4rem;
+      justify-content: space-between;
+    }
+
+    img {
+      border-radius: 12px;
+      width: 100%;
+      @include media-medium {
+        width: 50%;
+      }
+    }
+
+    .text_wrapper {
+      display: flex;
+      flex-direction: column;
+       @include media-medium {
+        justify-content: center;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.section5 {
+  .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media-medium {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .data_text {
+    @include Caption__01-Medium;
+    display: block;
+  }
+
+  form {
+    justify-self: center;
+    width: 100%;
   }
 }
