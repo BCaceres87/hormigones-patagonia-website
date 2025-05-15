@@ -1,14 +1,5 @@
 @use '../styles/main.scss' as *;
 
-.contact_button {
-	background-color: $trendy-green-300;
-	border: 0;
-	border-radius: 0.2rem;
-	color: $neutral-100;
-	cursor: pointer;
-	padding: 0.5rem 0.8rem;
-}
-
 .logo {
 	width: 12rem;
 }
@@ -46,13 +37,8 @@
 			list-style: none;
 			align-items: center;
 			justify-content: space-around;
+			margin: 0;
 			width: 30%;
-		}
-		li {
-			text-decoration: none;
-		}
-		li:hover {
-			font-weight: bold;
 		}
 	}	
 
