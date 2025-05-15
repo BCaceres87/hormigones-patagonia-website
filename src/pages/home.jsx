@@ -9,6 +9,7 @@ import Wrapper from "../components/wrapper"
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined, RightOutlined } from "@ant-design/icons"
 import Layout from "../components/layout"
 import ContactForm from "../components/contact-form"
+import { Button } from "antd"
 
 const Home = () => {
   const navigate = useNavigate()
@@ -20,18 +21,18 @@ const Home = () => {
             <h1>Hormigones Patagonia: calidad y confianza</h1>
             <p>En Hormigones Patagonia, nos dedicamos a ofrecer materiales de construcción de la más alta calidad, garantizando entregas puntuales y un servicio excepcional. Nuestra experiencia y compromiso nos han permitido ganar la confianza de numerosos clientes en el sector.</p>
             <div className={styles.buttons_wrapper}>
-              <button 
-                className={styles.primary_button}
+              <Button 
+                type="secondary"
                 onClick={() => navigate('/about')}
               >
                 Conócenos
-              </button>
-              <button 
-                className={styles.secondary_button}
+              </Button>
+              <Button 
+                className={styles.services_button}
                 onClick={() => navigate('/services')}
               >
                 Servicios
-              </button>
+              </Button>
             </div>
           </div>
         </Wrapper>

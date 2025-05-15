@@ -35,6 +35,9 @@
     @include media-medium {
       width: 40%;
     }
+    h1 {
+      color: $neutral-100;
+    }
   }
 
   .buttons_wrapper {
@@ -42,22 +45,12 @@
     gap: 1rem;
     margin-top: 2rem;
 
-    .primary_button {
-      background-color: $neutral-100;
-      color: $neutral-700;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-    }
-    
-    .secondary_button {
+    .services_button {
       background-color: transparent;
       color: $neutral-100;
-      border: 1px solid $neutral-100;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
+      &:hover {
+        color: $trendy-green-300;
+      }
     }
   }
 }

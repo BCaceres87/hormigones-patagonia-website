@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../assets/logo/logo_navbar.png'
 import styles from './nav-bar.module.scss'
+import { Button } from 'antd';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const NavBar = () => {
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
       <ul className={styles.list}>
-        <li className={styles.list_element}>
+        <li>
           <Link
             activeclass="active"
             to='/'
@@ -43,7 +44,7 @@ const NavBar = () => {
             Home
           </Link>
         </li>
-        <li className={styles.list_element}>
+        <li>
           <Link
             activeclass="active"
             to= '/projects'
@@ -55,7 +56,7 @@ const NavBar = () => {
             Proyectos
           </Link>
         </li>
-        <li className={styles.list_element}>
+        <li>
           <Link
             activeclass="active"
             to= '/services'
@@ -67,7 +68,7 @@ const NavBar = () => {
             Servicios
           </Link>
         </li>
-        <li className={styles.list_element}>
+        <li>
           <Link
             activeclass="active"
             to='/about'
@@ -79,18 +80,13 @@ const NavBar = () => {
             Nosotros
           </Link>
         </li>
-        <li className={styles.list_element}>
-          <button
-            activeclass="active"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+        <li>
+          <Button
+            type="primary"
             onClick={() => navigate('/contact')}
-            className={styles.contact_button}
           >
             Contacto
-          </button>
+          </Button>
         </li>
       </ul>
       <div className={styles.toggle_menu} onClick={menuToggle}>

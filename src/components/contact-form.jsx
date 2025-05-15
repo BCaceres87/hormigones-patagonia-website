@@ -55,6 +55,7 @@ const ContactForm = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
+        className={styles.form}
       >
         <Form.Item
           label="Nombre"
@@ -112,7 +113,7 @@ const ContactForm = () => {
           rules={[{ required: true, message: 'Por favor ingresa un mensaje' }]}
         >
           <TextArea
-            placeholder="Escribe tu mensaje"
+            placeholder="Escribe tu mensaje..."
             autoSize={{ minRows: 3, maxRows: 5 }}
             className={styles.input}
           />
