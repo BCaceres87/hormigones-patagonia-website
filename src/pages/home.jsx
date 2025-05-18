@@ -10,6 +10,13 @@ import { EnvironmentOutlined, MailOutlined, PhoneOutlined, RightOutlined } from 
 import Layout from "../components/layout"
 import ContactForm from "../components/contact-form"
 import { Button } from "antd"
+import Ancud from "../assets/logos/ancud_logo.png"
+import Aysen from "../assets/logos/aysen_logo.png"
+import Cochamo from "../assets/logos/cochamo_logo.png"
+import Coyhaique from "../assets/logos/coyhaique_logo.png"
+import Mostazal from "../assets/logos/mostazal_logo.webp"
+import Duoc from "../assets/logos/duoc_logo.png"
+import Quinchao from "../assets/logos/quinchao_logo.png"
 
 const Home = () => {
   const navigate = useNavigate()
@@ -39,13 +46,15 @@ const Home = () => {
       </section>
       <section className={styles.section2}>
         <Wrapper>
-          <span className={styles.subtitle}>Ellos ya confían en nosotros</span>
+          <h5>Ellos ya confían en nosotros</h5>
           <div className={styles.logos_wrapper}>
-            <img src="" alt="Cliente 1" />
-            <img src="" alt="Cliente 2" />
-            <img src="" alt="Cliente 3" />
-            <img src="" alt="Cliente 4" />
-            <img src="" alt="Cliente 5" />
+            <img src={Ancud} alt="Ancud logo" />
+            <img src={Aysen} alt="Cliente 2" />
+            <img src={Cochamo} alt="Cliente 3" />
+            <img src={Coyhaique} alt="Cliente 4" />
+            <img src={Mostazal} alt="Cliente 5" />
+            <img src={Quinchao} alt="Cliente 5" className={styles.quinchao_logo}/>
+            <img src={Duoc} alt="Cliente 5" />
           </div>
         </Wrapper>
       </section>

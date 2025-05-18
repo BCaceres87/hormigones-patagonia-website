@@ -58,13 +58,19 @@
 .section2 {
   display: flex;
   flex-direction: column;
-  padding: 5rem 0;
+  padding: 3rem 0;
   row-gap: 3rem;
   text-align: center;
 
   .logos_wrapper {
     display: flex;
     justify-content: space-around;
+
+    img {
+      height: 80px;
+      width: 10%;
+      object-fit: contain;
+    }
   }
 
   .subtitle {
