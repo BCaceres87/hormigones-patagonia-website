@@ -9,7 +9,6 @@
   background-image: url('../assets/images/bg1.jpeg');
   background-size: cover;
   background-position: center;
-  color: $neutral-100;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +34,7 @@
     @include media-medium {
       width: 40%;
     }
-    h1 {
+    h1, p {
       color: $neutral-100;
     }
   }
@@ -121,26 +120,5 @@
         width: 50%;
       }
     }
-  }
-}
-
-.section5 {
-  .content_wrapper {
-    display: flex;
-    flex-direction: column;
-    @include media-medium {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .data_text {
-    @include Caption__01-Medium;
-    display: block;
-  }
-
-  form {
-    justify-self: center;
-    width: 100%;
   }
 }
