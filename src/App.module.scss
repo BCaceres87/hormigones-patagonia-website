@@ -22,7 +22,6 @@ button:focus {
 
 .app {
 	align-items: center;
-	color: $neutral-800;
 	display: flex;
 	flex-direction: column;
 
@@ -75,9 +74,11 @@ button:focus {
 		@include Caption__01-Regular;
 	}
 
-
 	button {
 		@include Button__01-Regular;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	p {
