@@ -1,0 +1,47 @@
+@use "../styles/main.scss" as *;
+
+.header {
+   @include hero-text-spacing;
+   background-image: url('../assets/images/contact_background.jpeg');
+   background-size: cover;
+   background-position: center;
+   height: 60vh;
+   position: relative;
+   text-align: center;
+   width: 100vw;
+
+   h1, p {
+      color: $neutral-100;
+   }
+
+   .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-self: center;
+      width: 100%;
+      @include media-medium {
+         width: 40%;
+      }
+   }
+
+   > * {
+      position: relative;
+      z-index: 2;
+    }
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); // Capa oscura, puedes ajustar el 0.5 para más o menos oscuridad
+      z-index: 1;
+    }
+}
+
+
+  
+  

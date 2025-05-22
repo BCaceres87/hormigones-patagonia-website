@@ -1,345 +1,198 @@
+@use 'sass:map';
 @use './tokens' as *;
-@use './mediaqueries' as  mq;
+@use './mediaqueries' as mq;
+
+@mixin text-style($size, $weight, $spacing, $lineHeight, $mq-sizes: null) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  line-height: $lineHeight;
+  text-transform: none;
+
+  @if $mq-sizes != null {
+    @include mq.media-medium {
+      font-size: map.get($mq-sizes, 'md');
+    }
+    @include mq.media-large {
+      font-size: map.get($mq-sizes, 'lg');
+    }
+  }
+}
 
 @mixin Headline__01-Regular {
-	font-size: $font-size-002;
-	font-weight: $font-weight-001;
-	letter-spacing: 0%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-001;
-	}
-	@include mq.media-large{
-		font-size: $font-size-000;
-	}
+  @include text-style($font-size-002, $font-weight-001, 0em, 1.2, (
+    md: $font-size-001,
+    lg: $font-size-000
+  ));
 }
 
 @mixin Headline__01-Medium {
-	font-size: $font-size-002;
-	font-weight: $font-weight-002;
-	letter-spacing: -0.5%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-001;
-	}
-	@include mq.media-large{
-		font-size: $font-size-000;
-	}
+  @include text-style($font-size-002, $font-weight-002, -0.005em, 1.2, (
+    md: $font-size-001,
+    lg: $font-size-000
+  ));
 }
 
 @mixin Headline__01-Bold {
-	font-size: $font-size-002;
-	font-weight: $font-weight-003;
-	letter-spacing: -0.5%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-001;
-	}
-	@include mq.media-large{
-		font-size: $font-size-000;
-	}
+  @include text-style($font-size-002, $font-weight-003, -0.005em, 1.2, (
+    md: $font-size-001,
+    lg: $font-size-000
+  ));
 }
 
 @mixin Headline__02-Regular {
-	font-size: $font-size-003;
-	font-weight: $font-weight-000;
-	letter-spacing: 0%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-002;
-	}
-	@include mq.media-large{
-		font-size: $font-size-001;
-	}
+  @include text-style($font-size-003, $font-weight-000, 0em, 1.2, (
+    md: $font-size-002,
+    lg: $font-size-001
+  ));
 }
 
 @mixin Headline__02-Medium {
-	font-size: $font-size-003;
-	font-weight: $font-weight-001;
-	letter-spacing: 0%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-002;
-	}
-	@include mq.media-large{
-		font-size: $font-size-001;
-	}
+  @include text-style($font-size-003, $font-weight-001, 0em, 1.2, (
+    md: $font-size-002,
+    lg: $font-size-001
+  ));
 }
 
 @mixin Headline__02-Bold {
-	font-size: $font-size-003;
-	font-weight: $font-weight-002;
-	letter-spacing: 0%;
-	line-height: 120%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-002;
-	}
-	@include mq.media-large{
-		font-size: $font-size-001;
-	}
+  @include text-style($font-size-003, $font-weight-002, 0em, 1.2, (
+    md: $font-size-002,
+    lg: $font-size-001
+  ));
 }
 
 @mixin Headline__03-Regular {
-	font-size: $font-size-005;
-	font-weight: $font-weight-000;
-	letter-spacing: 0.25%;
-	line-height: 130%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 140%;
-	}
+  @include text-style($font-size-005, $font-weight-000, 0.025em, 1.3, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__03-Medium {
-	font-size: $font-size-005;
-	font-weight: $font-weight-001;
-	letter-spacing: 0.25%;
-	line-height: 130%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 140%;
-	}
+  @include text-style($font-size-005, $font-weight-001, 0.025em, 1.3, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__03-Bold {
-	font-size: $font-size-005;
-	font-weight: $font-weight-002;
-	letter-spacing: 0.25%;
-	line-height: 130%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 140%;
-	}
+  @include text-style($font-size-005, $font-weight-002, 0.025em, 1.3, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__03-Black {
-	font-size: $font-size-005;
-	font-weight: $font-weight-003;
-	letter-spacing: 0.25%;
-	line-height: 130%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 140%;
-	}
+  @include text-style($font-size-005, $font-weight-003, 0.025em, 1.3, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__04-Regular {
-	font-size: $font-size-005;
-	font-weight: $font-weight-000;
-	letter-spacing: 0%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 130%;
-	}
+  @include text-style($font-size-005, $font-weight-000, 0em, 1.4, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__04-Medium {
-	font-size: $font-size-005;
-	font-weight: $font-weight-001;
-	letter-spacing: 0%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 130%;
-	}
+  @include text-style($font-size-005, $font-weight-001, 0em, 1.4, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__04-Bold {
-	font-size: $font-size-005;
-	font-weight: $font-weight-002;
-	letter-spacing: 0%;
-	text-transform: none;
-	line-height: 140%;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 130%;
-	}
+  @include text-style($font-size-005, $font-weight-002, 0em, 1.4, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__04-Black {
-	font-size: $font-size-005;
-	font-weight: $font-weight-003;
-	letter-spacing: 0%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-004;
-		line-height: 130%;
-	}
+  @include text-style($font-size-005, $font-weight-003, 0em, 1.4, (
+    md: $font-size-004
+  ));
 }
 
 @mixin Headline__05-Regular {
-	font-size: $font-size-006;
-	font-weight: $font-weight-000;
-	letter-spacing: 0.15%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-005;
-	}
+  @include text-style($font-size-006, $font-weight-000, 0.015em, 1.4, (
+    md: $font-size-005
+  ));
 }
 
 @mixin Headline__05-Medium {
-	font-size: $font-size-006;
-	font-weight: $font-weight-001;
-	letter-spacing: 0.15%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-005;
-	}
+  @include text-style($font-size-006, $font-weight-001, 0.015em, 1.4, (
+    md: $font-size-005
+  ));
 }
 
 @mixin Headline__05-Bold {
-	font-size: $font-size-006;
-	font-weight: $font-weight-003;
-	letter-spacing: 0.15%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-005;
-	}
+  @include text-style($font-size-006, $font-weight-003, 0.015em, 1.4, (
+    md: $font-size-005
+  ));
 }
 
 @mixin Headline__05-Black {
-	font-size: $font-size-006;
-	font-weight: $font-weight-003;
-	letter-spacing: 0.15%;
-	line-height: 140%;
-	text-transform: none;
-	@include mq.media-medium{
-		font-size: $font-size-005;
-	}
+  @include text-style($font-size-006, $font-weight-003, 0.015em, 1.4, (
+    md: $font-size-005
+  ));
 }
 
 @mixin Subtitle__01-Regular {
-	font-size: $font-size-005;
-	font-weight: $font-weight-000;
-	letter-spacing: 0.15%;
-	text-transform: none;
+  @include text-style($font-size-005, $font-weight-000, 0.015em, 1.4);
 }
 
 @mixin Subtitle__01-Medium {
-	font-size: $font-size-005;
-	font-weight: $font-weight-001;
-	letter-spacing: 0.15%;
-	text-transform: none;
+  @include text-style($font-size-005, $font-weight-001, 0.015em, 1.4);
 }
 
 @mixin Subtitle__01-Bold {
-	font-size: $font-size-005;
-	font-weight: $font-weight-002;
-	letter-spacing: 0.15%;
-	text-transform: none;
+  @include text-style($font-size-005, $font-weight-002, 0.015em, 1.4);
 }
 
 @mixin Subtitle__02-Regular {
-	font-size: $font-size-008;
-	font-weight: $font-weight-000;
-	letter-spacing: 0.1%;
-	line-height: 150%;
-	text-transform: none;
-	@include mq.media-medium {
-		font-size: $font-size-007;
-	}
+  @include text-style($font-size-008, $font-weight-000, 0.01em, 1.5, (
+    md: $font-size-007
+  ));
 }
 
 @mixin Subtitle__02-Medium {
-	font-size: $font-size-008;
-	font-weight: $font-weight-002;
-	letter-spacing: 0.1%;
-	line-height: 150%;
-	text-transform: none;
-	@include mq.media-medium {
-		font-size: $font-size-007;
-	}
+  @include text-style($font-size-008, $font-weight-002, 0.01em, 1.5, (
+    md: $font-size-007
+  ));
 }
 
 @mixin Subtitle__02-Bold {
-	font-size: $font-size-008;
-	font-weight: $font-weight-003;
-	letter-spacing: 0.1%;
-	line-height: 150%;
-	text-transform: none;
-	@include mq.media-medium {
-		font-size: $font-size-007;
-		font-weight: $font-weight-003;
-	}
+  @include text-style($font-size-008, $font-weight-003, 0.01em, 1.5, (
+    md: $font-size-007
+  ));
 }
 
 @mixin Body__01-Regular {
-	font-size: $font-size-008;
-	font-weight: $font-weight-000;
-	letter-spacing: 0%;
-	line-height: 150%;
-	text-transform: none;
-	@include mq.media-medium {
-		font-size: $font-size-007;
-	}
+  @include text-style($font-size-008, $font-weight-000, 0em, 1.5, (
+    md: $font-size-007
+  ));
 }
 
 @mixin Body__02-Regular {
-	font-size: $font-size-008;
-	font-weight: $font-weight-000;
-	letter-spacing: 0%;
-	line-height: 150%;
-	text-transform: none;
+  @include text-style($font-size-008, $font-weight-000, 0em, 1.5);
 }
 
 @mixin Button__01-Regular {
-	font-size: $font-size-006;
-	font-weight: $font-weight-001;
-	letter-spacing: 0%;
-	text-transform: none;
+  @include text-style($font-size-006, $font-weight-001, 0em, 1.5);
 }
 
 @mixin Button__01-Medium {
-	font-size: $font-size-006;
-	font-weight: $font-weight-002;
-	letter-spacing: 1.25%;
-	text-transform: none;
+  @include text-style($font-size-006, $font-weight-002, 0.0125em, 1.5);
 }
 
 @mixin Caption__01-Regular {
-	font-size: $font-size-008;
-	font-weight: $font-weight-000;
-	letter-spacing: 0.4%;
-	line-height: 124.18750524520874%;
-	text-transform: none;
+  @include text-style($font-size-008, $font-weight-000, 0.004em, 1.25);
 }
 
 @mixin Caption__01-Medium {
-	font-size: $font-size-008;
-	font-weight: $font-weight-001;
-	letter-spacing: 0%;
-	line-height: 150%;
-	text-transform: none;
+  @include text-style($font-size-008, $font-weight-001, 0em, 1.5);
 }
 
 @mixin Overline__01-Regular {
-	font-size: $font-size-008;
-	font-weight: $font-weight-000;
-	letter-spacing: 1.5%;
-	line-height: 122.18749523162842%;
-	text-transform: none;
+  @include text-style($font-size-008, $font-weight-000, 0.015em, 1.22);
 }
 
 @mixin Overline__01-Medium {
-	font-size: $font-size-008;
-	font-weight: $font-weight-001;
-	letter-spacing: 1.5%;
-	text-transform: none;
+  @include text-style($font-size-008, $font-weight-001, 0.015em, 1.22);
 }

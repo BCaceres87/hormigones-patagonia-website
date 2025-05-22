@@ -12,8 +12,8 @@ const ContactForm = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const handlePhoneChange = (e) => {
-    const onlyNums = e.target.value.replace(/\D/g, ''); // elimina todo lo que no sea número
-    setPhoneNumber(onlyNums.slice(0, 9)); // limita a 9 dígitos
+    const onlyNums = e.target.value.replace(/\D/g, '');
+    setPhoneNumber(onlyNums.slice(0, 9));
   };
 
   const onFinish = (values) => {
@@ -132,7 +132,6 @@ const ContactForm = () => {
           <Checkbox>He leído y acepto los <Link to='/terms-and-conditions' className={styles.link}>Términos y condiciones</Link>
           </Checkbox>
         </Form.Item>
-      
         <Form.Item label={null}>
           <Button type="primary" htmlType="submit">
             Enviar
