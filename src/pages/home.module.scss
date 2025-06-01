@@ -1,9 +1,5 @@
 @use "../styles/main.scss" as *;
 
-.container {
-  @include wrapper;
-}
-
 .section1 {
   align-items: flex-start;
   background-image: url('../assets/images/bg1.jpeg');
@@ -62,13 +58,22 @@
   text-align: center;
 
   .logos_wrapper {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    @include media-medium {
+      display: flex;
+      justify-content: space-around;
+    }
 
     img {
       height: 80px;
-      width: 10%;
+      width: 50%;
       object-fit: contain;
+
+      @include media-medium {
+        width: 10%;
+      }
     }
   }
 

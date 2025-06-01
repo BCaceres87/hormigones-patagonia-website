@@ -6,9 +6,7 @@ import Cement from '../assets/images/card3.jpg'
 import Img1 from '../assets/images/image1.jpg'
 import Card from "../components/card"
 import Wrapper from "../components/wrapper"
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined, RightOutlined } from "@ant-design/icons"
-import Layout from "../components/layout"
-import ContactForm from "../components/contact-form"
+import { RightOutlined } from "@ant-design/icons"
 import { Button } from "antd"
 import Ancud from "../assets/logos/ancud_logo.png"
 import Aysen from "../assets/logos/aysen_logo.png"
@@ -22,7 +20,7 @@ import ContactContent from "../components/contact-content"
 const Home = () => {
   const navigate = useNavigate()
   return (
-    <Layout>
+    <>
       <section className={styles.section1}>
         <Wrapper>
           <div className={styles.text_wrapper}>
@@ -66,7 +64,7 @@ const Home = () => {
            <Card
              image={Services}
              title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Ofrecemos hormigón premezclado de alta calidad para tus obras"
+             description="Ofrecemos hormigón premezclado de alta calidad para tus ."
              linkText="Nuestros servicios"
              path="/services"
            />
@@ -106,7 +104,7 @@ const Home = () => {
         <ContactContent/>
        </Wrapper>
      </section>
-    </Layout>
+    </>
   )
 }
 
