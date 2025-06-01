@@ -42,36 +42,32 @@ button:focus {
 
 	h1 {
 		@include Headline__01-Bold;
-		margin: 2rem 0 1rem;
+		margin: 2rem 0 1rem 0;
 	}
 
 	h2 {
 		@include Headline__02-Bold;
-		margin: 1.5rem 0 1rem;
+		margin: 1.5rem 0 1rem 0;
 	}
 
 	h3 {
-		@include Headline__03-Bold;
-		margin: 1.25rem 0 0.75rem;
+		@include Headline__03-Black;
+		margin: 1.25rem 0 1rem 0;
 	}
 
 	h4 {
 		@include Headline__04-Bold;
-		margin: 1rem 0 0.5rem;
+		margin: 1rem 0 1rem 0;
 	}
 
 	h5 {
 		@include Headline__05-Bold;
-		margin: 0.75rem 0 0.5rem;
+		margin: 0.75rem 0 2rem 0;
 	}
 
 	h6 {
 		@include Subtitle__01-Bold;
-		margin: 0.5rem 0 0.25rem;
-	}
-
-	li {
-		@include Caption__01-Regular;
+		margin: 0.5rem 0 0.25rem 0;
 	}
 
 	button {
@@ -79,6 +75,10 @@ button:focus {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 1.25rem 1rem;
+		@include media-medium {
+			padding: 1.375rem 1.25rem;
+		}
 	}
 
 	p {
