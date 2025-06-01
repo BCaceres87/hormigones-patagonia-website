@@ -1,22 +1,26 @@
-import Layout from '../components/layout'
+import ContactContent from '../components/contact-content'
+import Wrapper from '../components/wrapper'
+import styles from './contact.module.scss'
 
 const Contact = () => {
   return (
-   <Layout>
-     <section>
-      <span>
-        Cotiza con nosotros
-      </span>
-      <h2>
-        Contáctanos
-      </h2>
-      <p>Estamos aquí para ayudarte</p>
-      <span>hello@Hormigonespatagonia.cl</span>
-      <span>+56 9 1234 5678</span>
-      <span>123 Calle Ejemplo, Santiago, Chile</span>
-      <ContactForm/>
-     </section>
-   </Layout>
+   <>
+    <header className={styles.header}>
+      <Wrapper>
+        <div className={styles.text_wrapper}>
+          <h1>Estamos aquí para ayudarte</h1>
+          <p>No dudes en ponerte en contacto con nosotros para cualquier consulta o solicitud de materiales.</p>
+        </div>
+      </Wrapper>
+    </header>
+    <section>
+      <div className={styles.content}>
+        <Wrapper>
+          <ContactContent/>
+        </Wrapper>
+      </div>
+    </section>
+   </>
   )
 }
 

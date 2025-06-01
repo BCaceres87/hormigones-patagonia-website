@@ -6,15 +6,21 @@ import Cement from '../assets/images/card3.jpg'
 import Img1 from '../assets/images/image1.jpg'
 import Card from "../components/card"
 import Wrapper from "../components/wrapper"
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined, RightOutlined } from "@ant-design/icons"
-import Layout from "../components/layout"
-import ContactForm from "../components/contact-form"
+import { RightOutlined } from "@ant-design/icons"
 import { Button } from "antd"
+import Ancud from "../assets/logos/ancud_logo.png"
+import Aysen from "../assets/logos/aysen_logo.png"
+import Cochamo from "../assets/logos/cochamo_logo.png"
+import Coyhaique from "../assets/logos/coyhaique_logo.png"
+import Mostazal from "../assets/logos/mostazal_logo.webp"
+import Duoc from "../assets/logos/duoc_logo.png"
+import Quinchao from "../assets/logos/quinchao_logo.png"
+import ContactContent from "../components/contact-content"
 
 const Home = () => {
   const navigate = useNavigate()
   return (
-    <Layout>
+    <>
       <section className={styles.section1}>
         <Wrapper>
           <div className={styles.text_wrapper}>
@@ -39,13 +45,15 @@ const Home = () => {
       </section>
       <section className={styles.section2}>
         <Wrapper>
-          <span className={styles.subtitle}>Ellos ya confían en nosotros</span>
+          <h5>Ellos ya confían en nosotros</h5>
           <div className={styles.logos_wrapper}>
-            <img src="" alt="Cliente 1" />
-            <img src="" alt="Cliente 2" />
-            <img src="" alt="Cliente 3" />
-            <img src="" alt="Cliente 4" />
-            <img src="" alt="Cliente 5" />
+            <img src={Ancud} alt="Ancud logo" />
+            <img src={Aysen} alt="Cliente 2" />
+            <img src={Cochamo} alt="Cliente 3" />
+            <img src={Coyhaique} alt="Cliente 4" />
+            <img src={Mostazal} alt="Cliente 5" />
+            <img src={Quinchao} alt="Cliente 5" className={styles.quinchao_logo}/>
+            <img src={Duoc} alt="Cliente 5" />
           </div>
         </Wrapper>
       </section>
@@ -56,7 +64,7 @@ const Home = () => {
            <Card
              image={Services}
              title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Ofrecemos hormigón premezclado de alta calidad para tus obras"
+             description="Ofrecemos hormigón premezclado de alta calidad para tus ."
              linkText="Nuestros servicios"
              path="/services"
            />
@@ -93,24 +101,10 @@ const Home = () => {
       </section>
       <section className={styles.section5}>
        <Wrapper>
-        <div className={styles.content_wrapper}>
-          <div>
-             <span>
-               Cotiza con nosotros
-             </span>
-             <h2>
-               Contáctanos
-             </h2>
-             <p>Estamos aquí para ayudarte</p>
-             <span className={styles.data_text}><MailOutlined /> constructorahbspa@gmail.com</span>
-             <span className={styles.data_text}><PhoneOutlined /> +56 9 6628 3243</span>
-             <span className={styles.data_text}><EnvironmentOutlined /> Monte verde 0108, Valdivia, Chile</span>
-          </div>
-            <ContactForm/>
-        </div>
+        <ContactContent/>
        </Wrapper>
      </section>
-    </Layout>
+    </>
   )
 }
 

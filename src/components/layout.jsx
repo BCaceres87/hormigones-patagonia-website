@@ -1,4 +1,5 @@
 import NavBar from './nav-bar'
+import Footer from './footer'
 import styles from './layout.module.scss'
 
 const Layout = ({ children }) => {
@@ -10,9 +11,7 @@ const Layout = ({ children }) => {
       <main className={styles.main}>
         {children}
       </main>
-      <footer>
-        Footer
-      </footer>
+      <Footer/>
     </div>
   )
 }

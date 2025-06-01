@@ -8,7 +8,6 @@
 html, body {
 	font-family: 'Montserrat', 'Roboto', sans-serif;
 	height: 100%;
-	margin: 0;
   overflow-x: hidden; 
   padding: 0;
 	width: 100%;
@@ -23,9 +22,9 @@ button:focus {
 
 .app {
 	align-items: center;
-	color: $neutral-800;
 	display: flex;
 	flex-direction: column;
+
 	a {
 		color: inherit; 
 		cursor: pointer;
@@ -42,37 +41,59 @@ button:focus {
 	}
 
 	h1 {
-		@include Headline__01-Bold;				
+		@include Headline__01-Bold;
+		margin: 2rem 0 1rem 0;
 	}
 
 	h2 {
 		@include Headline__02-Bold;
+		margin: 1.5rem 0 1rem 0;
 	}
 
 	h3 {
-		@include Headline__03-Bold;
+		@include Headline__03-Black;
+		margin: 1.25rem 0 1rem 0;
 	}
 
 	h4 {
 		@include Headline__04-Bold;
+		margin: 1rem 0 1rem 0;
 	}
 
 	h5 {
 		@include Headline__05-Bold;
+		margin: 0.75rem 0 2rem 0;
 	}
 
-	button, li {
-		@include Caption__01-Regular;
+	h6 {
+		@include Subtitle__01-Bold;
+		margin: 0.5rem 0 0.25rem 0;
+	}
+
+	button {
+		@include Button__01-Regular;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1.25rem 1rem;
+		@include media-medium {
+			padding: 1.375rem 1.25rem;
+		}
 	}
 
 	p {
-		@include media-xsmall{
-			@include Body__01-Regular; 
-		}
+		@include Body__01-Regular;
+		margin: 0 0 1rem;
 	}
 
 	small {
 		@include Caption__01-Regular;
+		display: block;
+		margin-top: 0.5rem;
+	}
+
+	.overline {
+		@include Overline__01-Medium;
 	}
 
 	.content_wrapper {

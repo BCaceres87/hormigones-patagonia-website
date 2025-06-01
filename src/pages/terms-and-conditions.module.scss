@@ -8,10 +8,15 @@
 }
 
 .section1 {
+  @include media-large {
+    padding: 0 10rem;
+  }
+
   .text_wrapper {
     @include hero-text-spacing;
-    @include media-medium {
-      padding: 0 10rem;
-    }
   }
+}
+
+.link {
+  font-weight: $font-weight-003;
 }
