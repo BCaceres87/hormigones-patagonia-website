@@ -21,12 +21,4 @@
 
 @mixin hero-text-spacing {
   padding-top: 5rem;
-
-  @include media-medium {
-    padding-top: 7rem;
-  }
-
-  @include media-large {
-    padding-top: 9rem;
-  }
 }
