@@ -8,6 +8,7 @@ import { useState } from 'react';
 const { TextArea } = Input;
 
 const ContactForm = () => {
+  const [form] = Form.useForm(); 
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const handlePhoneChange = (e) => {
@@ -30,6 +31,8 @@ const ContactForm = () => {
     .then((result) => {
        if (result.status === 200) {
         toast.success('¡Mensaje enviado con éxito!');
+        form.resetFields();
+        setPhoneNumber('')
       } else {
         toast.error('Hubo un error al enviar el mensaje');
       }
@@ -46,6 +49,7 @@ const ContactForm = () => {
   return (
     <>
       <Form
+        form={form}
         layout="vertical"
         name="basic"
         wrapperCol={{ span: 24 }}
@@ -122,7 +126,6 @@ const ContactForm = () => {
           </Button>
         </Form.Item>
       </Form>
-      <ToastContainer />
     </>
   );
 }
