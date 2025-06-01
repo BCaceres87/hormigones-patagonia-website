@@ -55,7 +55,7 @@
 }
 
 @mixin Headline__02-Bold {
-  @include text-style($font-size-003, $font-weight-002, 0em, 1.2, (
+  @include text-style($font-size-003, $font-weight-003, 0em, 1.2, (
     md: $font-size-002,
     lg: $font-size-001
   ));
@@ -174,9 +174,8 @@
 }
 
 @mixin Button__01-Regular {
-  @include text-style($font-size-006, $font-weight-001, 0em, 1.5);
+  @include text-style($font-size-008, $font-weight-001, 0em, 1.5);
 }
-
 @mixin Button__01-Medium {
   @include text-style($font-size-006, $font-weight-002, 0.0125em, 1.5);
 }

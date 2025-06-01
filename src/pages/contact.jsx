@@ -1,11 +1,10 @@
 import ContactContent from '../components/contact-content'
-import Layout from '../components/layout'
 import Wrapper from '../components/wrapper'
 import styles from './contact.module.scss'
 
 const Contact = () => {
   return (
-   <Layout>
+   <>
     <header className={styles.header}>
       <Wrapper>
         <div className={styles.text_wrapper}>
@@ -21,7 +20,7 @@ const Contact = () => {
         </Wrapper>
       </div>
     </section>
-   </Layout>
+   </>
   )
 }
 
