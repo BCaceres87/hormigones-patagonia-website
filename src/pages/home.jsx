@@ -64,7 +64,7 @@ const Home = () => {
            <Card
              image={Services}
              title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Ofrecemos hormigón premezclado de alta calidad para tus ."
+             description="Ofrecemos hormigón premezclado de alta calidad para tus obras."
              linkText="Nuestros servicios"
              path="/services"
            />

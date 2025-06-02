@@ -28,8 +28,8 @@ const PrivacyPolicy = () => {
          <p>Para ejercer tus derechos, escríbenos a: <a href="mailto:correo@dominio.cl">constructorahbspa@gmail.com</a></p>
          <h3>Responsable del tratamiento</h3>
          <p>
-           Nombre de la empresa<br/>
-           Dirección física o ciudad<br/>
+           Hormigones Patagonia<br/>
+           Monte verde 0108, Valdivia, Chile<br/>
            Email: <a href="mailto:constructorahbspa@gmail.com">constructorahbspa@gmail.com</a>
          </p>
        </div>
