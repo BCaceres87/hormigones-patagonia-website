@@ -11,6 +11,7 @@ import CookiesBanner from './components/cookies-banner'
 import CookieSettings from './pages/cookie-settings'
 import { ToastContainer } from 'react-toastify'
 import ServiceTerms from './pages/service-terms'
+import PrivacyPolicy from './pages/privacy-policy'
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
         <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
         <Route path="/cookie-settings" element={<CookieSettings/>}/>
         <Route path="/service-terms" element={<ServiceTerms/>}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
       </Routes>
     </Layout>
     <ToastContainer />
