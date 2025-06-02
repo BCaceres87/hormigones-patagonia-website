@@ -8,14 +8,8 @@ import Card from "../components/card"
 import Wrapper from "../components/wrapper"
 import { RightOutlined } from "@ant-design/icons"
 import { Button } from "antd"
-import Ancud from "../assets/logos/ancud_logo.png"
-import Aysen from "../assets/logos/aysen_logo.png"
-import Cochamo from "../assets/logos/cochamo_logo.png"
-import Coyhaique from "../assets/logos/coyhaique_logo.png"
-import Mostazal from "../assets/logos/mostazal_logo.webp"
-import Duoc from "../assets/logos/duoc_logo.png"
-import Quinchao from "../assets/logos/quinchao_logo.png"
 import ContactContent from "../components/contact-content"
+import LogosSection from "../components/logos-section"
 
 const Home = () => {
   const navigate = useNavigate()
@@ -43,20 +37,7 @@ const Home = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section2}>
-        <Wrapper>
-          <h5>Ellos ya confían en nosotros</h5>
-          <div className={styles.logos_wrapper}>
-            <img src={Ancud} alt="Ancud logo" />
-            <img src={Aysen} alt="Cliente 2" />
-            <img src={Cochamo} alt="Cliente 3" />
-            <img src={Coyhaique} alt="Cliente 4" />
-            <img src={Mostazal} alt="Cliente 5" />
-            <img src={Quinchao} alt="Cliente 5" className={styles.quinchao_logo}/>
-            <img src={Duoc} alt="Cliente 5" />
-          </div>
-        </Wrapper>
-      </section>
+      <LogosSection title="Ellos ya confían en nosotros"/>
       <section className={styles.section3}>
        <Wrapper>
          <h3>Nuestros servicios: materiales y maquinaria para construcción de calidad</h3>
@@ -64,7 +45,7 @@ const Home = () => {
            <Card
              image={Services}
              title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Ofrecemos hormigón premezclado de alta calidad para tus ."
+             description="Ofrecemos hormigón premezclado de alta calidad para tus obras."
              linkText="Nuestros servicios"
              path="/services"
            />

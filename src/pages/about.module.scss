@@ -1,0 +1,94 @@
+@use "../styles/main.scss" as *;
+
+
+.header {
+  @include hero-text-spacing;
+  background-image: url('../assets/images/about_background.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+
+  h1, p {
+    color: $neutral-100;
+  }
+
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-self: center;
+    width: 100%;
+    @include media-medium {
+      justify-self: start;
+      text-align: left;
+      width: 50%;
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+   }
+}
+
+.section4 {  
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media-large {
+      justify-content: space-around;
+      flex-direction: row;
+      padding: 5rem;
+    }
+
+    .title_wrapper, .description_wrapper {
+      @include media-large {
+        width: 40%;
+      }
+    }
+
+    .description_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+      p {
+        margin: 0;
+      }
+
+      button {
+        margin-top: 2rem;
+        width: 40%;
+        @include media-large {
+          width: 30%;
+        }
+      }
+    }
+
+    .cyphers_wrapper {
+      display: flex;
+      gap: 4rem;      
+      @include media-large {
+        gap: 6rem;      
+        justify-content: space-between;
+      }
+    }
+  }
+
+  
+}

@@ -32,7 +32,7 @@ const NavBar = () => {
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
       <ul className={styles.list}>
-        {/* <li>
+        <li>
           <Link
             activeclass="active"
             to='/'
@@ -43,7 +43,7 @@ const NavBar = () => {
           >
             Home
           </Link>
-        </li> */}
+        </li>
         {/* <li>
           <Link
             activeclass="active"
@@ -67,7 +67,7 @@ const NavBar = () => {
           >
             Servicios
           </Link>
-        </li>
+        </li>*/}
         <li>
           <Link
             activeclass="active"
@@ -79,7 +79,7 @@ const NavBar = () => {
           >
             Nosotros
           </Link>
-        </li> */}
+        </li> 
         <li>
           <Button
             type="primary"
