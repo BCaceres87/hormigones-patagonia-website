@@ -10,6 +10,7 @@ import TermsAndConditions from './pages/terms-and-conditions'
 import CookiesBanner from './components/cookies-banner'
 import CookieSettings from './pages/cookie-settings'
 import { ToastContainer } from 'react-toastify'
+import ServiceTerms from './pages/service-terms'
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
         <Route path="/cookie-settings" element={<CookieSettings/>}/>
+        <Route path="/service-terms" element={<ServiceTerms/>}/>
       </Routes>
     </Layout>
     <ToastContainer />
