@@ -6,9 +6,9 @@ const ContactContent = () => {
   return (
     <div className={styles.content_wrapper}>
       <div>
-        <span>
+        <strong>
           Cotiza con nosotros
-        </span>
+        </strong>
         <h2>
           Contáctanos
         </h2>
