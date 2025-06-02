@@ -1,0 +1,36 @@
+@use "../styles/main.scss" as *;
+
+.container {
+  align-items: center;
+  background-color: $trendy-green-300;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 2rem;
+  @include media-large {
+    padding: 5rem;
+  }
+
+
+  @include media-large {
+    flex-direction: row;
+  }
+
+  h3 {
+    color: $neutral-100;
+    margin: 0;
+    @include media-large {
+      width: 40%;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: $neutral-100;
+    @include media-large {
+      width: 40%;
+    }
+  }
+}

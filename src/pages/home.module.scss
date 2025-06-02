@@ -50,38 +50,6 @@
   }
 }
 
-.section2 {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 0;
-  row-gap: 3rem;
-  text-align: center;
-
-  .logos_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    @include media-medium {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    img {
-      height: 80px;
-      width: 50%;
-      object-fit: contain;
-
-      @include media-medium {
-        width: 10%;
-      }
-    }
-  }
-
-  .subtitle {
-    @include Subtitle__02-Bold;
-  }
-}
-
 .section3 {
   display: flex;
   flex-direction: column;
