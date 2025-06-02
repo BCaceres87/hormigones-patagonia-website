@@ -9,7 +9,6 @@ import { LeftOutlined } from '@ant-design/icons';
 const CookieSettings = () => {
   const { acceptCookies, rejectCookies, cookiesAccepted } = useContext(CookiesContext);
 
-
   const handleAccept = () => {
     acceptCookies();
   };
