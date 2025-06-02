@@ -57,7 +57,7 @@ const Footer = () => {
           </span>
         </li>
         <li>
-          <Link className={styles.policy_link}>Política de Privacidad</Link>
+          <Link className={styles.policy_link} to="/privacy-policy">Política de Privacidad</Link>
         </li>
         <li>
           <Link className={styles.policy_link} to="/service-terms">Términos de Servicio</Link>
