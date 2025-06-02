@@ -4,11 +4,14 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { ConfigProvider } from 'antd';
 import 'antd/dist/antd.less';
+import { CookiesProvider } from './contexts/CookiesContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <ConfigProvider>
-      <App />
+      <CookiesProvider>
+        <App />
+      </CookiesProvider>
     </ConfigProvider>
   </BrowserRouter>,
 )

@@ -7,11 +7,15 @@ import About from './pages/about'
 import Contact from './pages/contact'
 import Layout from './components/layout'
 import TermsAndConditions from './pages/terms-and-conditions'
+import CookiesBanner from './components/cookies-banner'
+import CookieSettings from './pages/cookie-settings'
+import { ToastContainer } from 'react-toastify'
 
 export const App = () => {
   return (
    <div className={styles.app}>
     <Layout>
+      <CookiesBanner/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
@@ -19,9 +23,12 @@ export const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
+        <Route path="/cookie-settings" element={<CookieSettings/>}/>
       </Routes>
     </Layout>
+    <ToastContainer />
    </div>
+   
   )
 }
 

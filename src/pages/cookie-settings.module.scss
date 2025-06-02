@@ -1,0 +1,28 @@
+@use "../styles/main.scss" as *;
+
+.section1 {
+  @include media-large {
+    padding: 0 10rem;
+  }
+
+  .buttons_wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .redirect_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .text_wrapper {
+    @include hero-text-spacing;
+  }
+
+  .link {
+    font-weight: $font-weight-003;
+  }
+}
