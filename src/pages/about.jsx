@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer'
+import CountUp from 'react-countup'
 import Wrapper from '../components/wrapper'
 import styles from './about.module.scss'
 import LogosSection from '../components/logos-section'
@@ -7,6 +9,10 @@ import { useNavigate } from 'react-router-dom'
 
 const About = () => {
   const navigate = useNavigate();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3, // cuando 30% del componente esté visible
+  })
 
   return (
     <>
@@ -33,13 +39,13 @@ const About = () => {
             </div>
             <div className={styles.description_wrapper}>
               <p>Con más de 15 años en el mercado, hemos completado más de 500 proyectos exitosos. Nuestra dedicación al cliente se refleja en un 95% de satisfacción.</p>
-              <div className={styles.cyphers_wrapper}>
+              <div className={styles.cyphers_wrapper} ref={ref}>
                 <div>
-                  <h2>95%</h2>
+                  <h2>{inView ? <CountUp end={95} duration={2} suffix="%" /> : '0%'}</h2>
                   <span>Clientes satisfechos en toda la región</span>
                 </div>
                 <div>
-                  <h2>500</h2>
+                  <h2>{inView ? <CountUp end={500} duration={2.5} /> : '0'}</h2>
                   <span>Proyectos completados con éxito y calidad</span>
                 </div>
               </div>
