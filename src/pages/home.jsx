@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate()
   return (
     <>
-      <section className={styles.section1}>
+      <header className={styles.section1}>
         <Wrapper>
           <div className={styles.text_wrapper}>
             <h1>Hormigones Patagonia: calidad y confianza</h1>
@@ -36,7 +36,7 @@ const Home = () => {
             </div>
           </div>
         </Wrapper>
-      </section>
+      </header>
       <LogosSection title="Ellos ya confían en nosotros"/>
       <section className={styles.section3}>
        <Wrapper>
