@@ -1,20 +1,18 @@
 import ContactContent from '../components/contact-content'
 import Wrapper from '../components/wrapper'
-import styles from './contact.module.scss'
+import ContactImage from '../assets/images/contact_background.jpeg'
+import PageHeader from '../components/page-header'
 
 const Contact = () => {
   return (
    <>
-    <header className={styles.header}>
-      <Wrapper>
-        <div className={styles.text_wrapper}>
-          <h1>Estamos aquí para ayudarte</h1>
-          <p>No dudes en ponerte en contacto con nosotros para cualquier consulta o solicitud de materiales.</p>
-        </div>
-      </Wrapper>
-    </header>
+    <PageHeader 
+      backgroundImage={ContactImage}
+      title="Estamos aquí para ayudarte"
+      subtitle="No dudes en ponerte en contacto con nosotros para cualquier consulta o solicitud de materiales."
+    />
     <section>
-      <div className={styles.content}>
+      <div>
         <Wrapper>
           <ContactContent/>
         </Wrapper>

@@ -6,24 +6,23 @@ import LogosSection from '../components/logos-section'
 import AboutCard from '../components/about-card'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import AboutImage from '../assets/images/about_background.png'
+import PageHeader from '../components/page-header'
 
 const About = () => {
   const navigate = useNavigate();
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3, // cuando 30% del componente esté visible
+    threshold: 0.3,
   })
 
   return (
     <>
-      <section className={styles.header}>
-        <Wrapper>
-          <div className={styles.text_wrapper}>
-            <h1>Conócenos</h1>
-            <p>Hormigones Patagonia, su aliado en materiales de construcción de calidad y servicio excepcional en cada proyecto.</p>
-          </div>
-        </Wrapper>
-      </section>
+      <PageHeader
+        backgroundImage={AboutImage}
+        title="Conócenos"
+        subtitle="Hormigones Patagonia, su aliado en materiales de construcción de calidad y servicio excepcional en cada proyecto."
+      />
       <LogosSection title="Empresas que confían en nosotros"/>
       <section>
         <Wrapper>

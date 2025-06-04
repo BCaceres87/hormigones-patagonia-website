@@ -21,9 +21,9 @@ const Footer = () => {
          <li>
            <Link to="/contact">Contacto Rápido</Link>
          </li>
-         <li>
+         {/* <li>
            <Link to="/services">Nuestros Servicios</Link>
-         </li>
+         </li> */}
          <li>
            <Link to="/projects">Proyectos Destacados</Link>
          </li>
@@ -51,7 +51,7 @@ const Footer = () => {
      </div>
      <div className={styles.policies_wrapper}>
       <ul>
-        <li>
+        <li className={styles.rights_reserved_item}>
           <span className={styles.rights_reserved_text}>
             © 2025 Hormigones Patagonia. Todos los derechos reservados.
           </span>

@@ -1,0 +1,98 @@
+@use "../styles/main.scss" as *;
+
+.container {
+  justify-self: center;
+  position: relative;
+  margin: 4rem 0;
+  width: 100%;
+  @include media-large {
+    width: 50%;
+  }
+
+  &:hover button {
+    opacity: 1;
+  }
+
+  button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    border-radius: 50%;
+    color: $neutral-100;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .info_wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    .text_wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 1rem;
+      @include media-large {
+        flex-direction: row;
+      }
+
+      h5, p {
+        margin: 0;
+      }
+
+      p {
+        width: 50%;
+        text-align: justify;
+      }
+    }
+
+    .tags_wrapper {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      align-items: center; 
+      background-color: $neutral-200;
+      display: inline-flex; 
+      padding: 0 0.5rem;
+      white-space: nowrap;
+      span {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.button_left {
+  left: 10px;
+}
+
+.button_right {
+  right: 10px;
+}
+
+.image_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 15px;
+  height: 15rem;
+  width: 100%;
+  justify-self: center;
+  @include media-large {    
+    height: 40rem;
+  }
+}
+
