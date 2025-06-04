@@ -62,6 +62,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -69,9 +70,24 @@ footer {
     list-style: none;
     padding: 0;
     text-align: center;
+
     @include media-large {
       flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
+
+    li {
+      order: 0;
+    }
+
+    .rights_reserved_item {
+      order: 99;
+      @include media-large {
+        order: 0;
+      }
+    }
+
     .rights_reserved_text {
       font-size: $font-size-009;
     }

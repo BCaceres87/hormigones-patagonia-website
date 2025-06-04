@@ -44,7 +44,7 @@ const NavBar = () => {
             Home
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link
             activeclass="active"
             to= '/projects'
@@ -56,7 +56,7 @@ const NavBar = () => {
             Proyectos
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             activeclass="active"
             to= '/services'
