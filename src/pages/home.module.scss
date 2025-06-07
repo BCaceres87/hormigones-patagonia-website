@@ -96,6 +96,10 @@
         justify-content: center;
         width: 50%;
       }
+
+      a {
+        align-self: flex-end;
+      }
     }
   }
 }
