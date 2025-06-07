@@ -31,7 +31,7 @@ const NavBar = () => {
       >
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
-      <ul className={styles.list}>
+      <ul className={classNames(styles.list, { [styles.visible]: showMenu })}>
         <li>
           <Link
             activeclass="active"
