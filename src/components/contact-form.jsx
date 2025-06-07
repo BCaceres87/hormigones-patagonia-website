@@ -136,7 +136,7 @@ const ContactForm = () => {
           <Checkbox>He leído y acepto los <Link to='/terms-and-conditions' className={styles.link}>Términos y condiciones</Link>
           </Checkbox>
         </Form.Item>
-        <Form.Item label={null}>
+        <Form.Item label={null} className={styles.button_item}>
           <Button type="primary" htmlType="submit">
             Enviar
           </Button>
