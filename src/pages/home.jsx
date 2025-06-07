@@ -27,12 +27,12 @@ const Home = () => {
               >
                 Conócenos
               </Button>
-              <Button 
+              {/* <Button 
                 className={styles.services_button}
                 onClick={() => navigate('/services')}
               >
                 Servicios
-              </Button>
+              </Button> */}
             </div>
           </div>
         </Wrapper>
@@ -46,22 +46,22 @@ const Home = () => {
              image={Services}
              title="Soluciones efectivas para todos tus proyectos de construcción"
              description="Ofrecemos hormigón premezclado de alta calidad para tus obras."
-             linkText="Nuestros servicios"
-             path="/services"
+            //  linkText="Nuestros servicios"
+            //  path="/services"
            />
            <Card
              image={Arid}
              title="Soluciones efectivas para todos tus proyectos de construcción"
              description="Disponemos de gravilla, arena y otros áridos para tus necesidades."
-             linkText="Nuestros áridos"
-             path="/services"
+            //  linkText="Nuestros áridos"
+            //  path="/services"
            />  
            <Card
              image={Cement}
              title="Soluciones efectivas para todos tus proyectos de construcción"
              description="Proporcionamos cemento que cumple con los más altos estándares."
-             linkText="Nuestros proyectos"
-             path="/projects"
+            //  linkText="Nuestros proyectos"
+            //  path="/projects"
            />
          </div>
        </Wrapper>
