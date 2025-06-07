@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, 
-    // allowedHosts: ['f305-2803-c600-d304-dbb0-a85e-760b-5f33-b77.ngrok-free.app']
   },
   // base: '/hormigones-patagonia-website/',
   css: {
