@@ -29,22 +29,44 @@
 		margin-top: 0;
 	}
 
-	ul {
+	.list {
 		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 6rem;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		padding: 1rem;
+		gap: 1rem;
+		list-style: none;
+		text-align: center;
+		z-index: 999;
+	
 		@include media-large {
 			display: flex;
+			position: static;
+			flex-direction: row;
+			width: auto;
+			background-color: transparent;
 			gap: 2rem;
-			list-style: none;
-			align-items: center;
-			justify-content: space-around;
-			margin: 0;
-			width: 30%;
+			padding: 0;
 		}
-	}	
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: end;
+		}
+	}
+
+	.visible {
+		display: flex;
+	}
 
 	.toggle_menu {
 		display: block; 
-		font-size: 2rem;
+		font-size: 1.5rem;
 		cursor: pointer;
 		@include media-large {
 			display: none; 

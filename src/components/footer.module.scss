@@ -19,8 +19,9 @@ footer {
   display: flex;
   flex-direction: column;
   height: 50%;
+  border-bottom: 1px solid $neutral-800;
+  padding-bottom: 2rem;
   @include media-large {
-    border-bottom: 1px solid $neutral-800;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -62,6 +63,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+  @include media-large {
+    margin-top: 1rem;
+  }
 
   ul {
     display: flex;

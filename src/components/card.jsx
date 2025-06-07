@@ -11,7 +11,10 @@ const Card = ({image, title, description, linkText, path}) => {
       <div className={styles.text_wrapper}>
         <h5>{title}</h5>
         <span>{description}</span>
-        <Link to={path}>{linkText} <RightOutlined /></Link>
+        {path && linkText && (
+            <Link to={path}>{linkText} <RightOutlined /></Link>
+          )
+        }
       </div>
     </div>
   )
