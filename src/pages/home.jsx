@@ -75,7 +75,7 @@ const Home = () => {
              <p>
                En Hormigones Patagonia, nuestra misión es proporcionar materiales de construcción de la más alta calidad, asegurando entregas puntuales y un servicio al cliente excepcional. Nuestra visión es ser la empresa líder en el sector, reconocida por nuestra integridad y compromiso con la satisfacción del cliente.
              </p>
-             <Link to="">Saber más <RightOutlined /></Link>
+             {/* <Link to="">Saber más <RightOutlined /></Link> */}
            </div>
         </div>
        </Wrapper>
