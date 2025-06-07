@@ -2,12 +2,18 @@
 
 .header {
   @include hero-text-spacing;
+  align-items: center;
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  display: flex;
+  height: 100vh;
   position: relative;
   text-align: center;
   width: 100vw;
+
+  @include media-large {
+    height: 60vh;
+  }
 
   h1, p {
     color: $neutral-100;
