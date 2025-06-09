@@ -92,6 +92,10 @@ button:focus {
 		margin-top: 0.5rem;
 	}
 
+	ul {
+		margin: 0;
+	}
+
 	.overline {
 		@include Overline__01-Medium;
 	}
