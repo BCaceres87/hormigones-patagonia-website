@@ -8,8 +8,11 @@ import Hormigon from '../assets/images/hormigon1.jpg'
 import Dry from '../assets/images/dry1.png'
 import Cement from '../assets/images/cement1.jpg'
 import Machinery from '../assets/images/machinery1.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Services = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <PageHeader
@@ -27,7 +30,8 @@ const Services = () => {
             <p>
               Hormigón premezclado de alta calidad, listo para tu obra.Resistente, duradero y con entregas puntuales que se adaptan a tus necesidades.
             </p>
-            {/* <Button type="primary"> Ver más <RightOutlined /></Button> */}
+            
+            <Button type="primary" onClick={() => navigate('/services/hormigon')}> Ver más <RightOutlined /></Button>
           </div>
           <div className={styles.image_wrapper}>
             <img src={Hormigon} alt="Hormigon image" />

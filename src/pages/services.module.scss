@@ -20,8 +20,11 @@
       }
       
       button {
-        align-self: flex-end;
         width: fit-content;
+        align-self: flex-end;
+        @include media-large {
+          align-self: flex-start;
+        }
       }
     }
 

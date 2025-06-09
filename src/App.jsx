@@ -12,6 +12,7 @@ import CookieSettings from './pages/cookie-settings'
 import { ToastContainer } from 'react-toastify'
 import ServiceTerms from './pages/service-terms'
 import PrivacyPolicy from './pages/privacy-policy'
+import HormigonService from './pages/hormigon-service'
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
         <Route path="/cookie-settings" element={<CookieSettings/>}/>
         <Route path="/service-terms" element={<ServiceTerms/>}/>
         <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+        <Route path="/services/hormigon" element={<HormigonService/>}/>
       </Routes>
     </Layout>
     <ToastContainer />
