@@ -1,0 +1,122 @@
+@use "../styles/main.scss" as *;
+
+.section1, .section2, .section3 {
+  div {
+    display: flex;
+    flex-direction: column;
+    @include media-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @include media-large {
+        gap: 1.5rem;
+        width: 45%;
+      }
+      
+      button {
+        align-self: flex-end;
+        width: fit-content;
+      }
+    }
+
+    .image_wrapper {
+      width: 100%;
+      margin-top: 1rem;
+
+      @include media-large {
+        margin-top: 0;
+        width: 45%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.section2 {
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+    @include media-large {
+      flex-direction: row;
+    }
+  }
+}
+
+.section3 {
+  .text_box {
+    display: flex;
+    h5 {
+      text-align: center;
+      @include media-large {
+        text-align: left;
+      }
+    }
+
+    @include media-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      @include media-large {
+        width: 45%;
+      }
+    }
+  }
+}
+
+.section4 {
+  div {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .text_wrapper {
+    display: flex;
+    @include media-large {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .paragraph_wapper {
+      @include media-large {
+        width: 45%;
+      }
+
+      button {
+        align-self: flex-end;
+        width: fit-content;
+      }
+    }
+  }
+
+  .image_wrapper {
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+      margin: 1rem 0;
+      width: 100%;
+      @include media-large {
+        height: 600px;
+        margin: 3rem 0;
+      }
+    }
+  }
+}
