@@ -30,7 +30,6 @@ const Services = () => {
             <p>
               Hormigón premezclado de alta calidad, listo para tu obra.Resistente, duradero y con entregas puntuales que se adaptan a tus necesidades.
             </p>
-            
             <Button type="primary" onClick={() => navigate('/services/hormigon')}> Ver más <RightOutlined /></Button>
           </div>
           <div className={styles.image_wrapper}>
@@ -82,7 +81,7 @@ const Services = () => {
                 </span>
               </div>
             </div>
-            {/* <Button type="primary"> Ver más <RightOutlined /></Button> */}
+            <Button type="primary" onClick={() => navigate('/services/cement')}> Ver más <RightOutlined /></Button>
           </div>
           <div className={styles.image_wrapper}>
             <img src={Cement} alt="Cement image" />

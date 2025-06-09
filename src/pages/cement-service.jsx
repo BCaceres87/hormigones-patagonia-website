@@ -1,45 +1,45 @@
-import AridsBackground from '../assets/images/arids_background.jpg'
-import PageHeader from '../components/page-header'
-import styles from './arids-service.module.scss'
-import AridsImage from '../assets/images/arids1.jpg'
 import Wrapper from '../components/wrapper'
+import CementBackground from '../assets/images/cement_background.jpg'
+import CementImage from '../assets/images/cement1.jpg'
 import InfoCell from '../components/info-cell'
 import CallIcon from '../assets/icons/call.svg'
 import TruckIcon from '../assets/icons/tabler_truck-delivery.svg'
 import Constructor from '../assets/icons/mdi_construction-outline.svg'
 import ContactRequestSection from '../components/contact-request-section'
+import styles from './cement-service.module.scss'
+import PageHeader from '../components/page-header'
 
-const AridsService = () => {
+const CementService = () => {
   return (
     <>
       <PageHeader
-        backgroundImage={AridsBackground}
-        title="Nuestros áridos"
-        subtitle="Gravilla, arena, estabilizado y más, para satisfacer los requerimientos de tu obra."
+        backgroundImage={CementBackground}
+        title="Cemento de alto rendimiento"
+        subtitle="Entrega rápida y asesoría técnica para cada tipo de obra."
       />
       <section className={styles.section1}>
         <Wrapper>
           <div className={styles.image_wrapper}>
-            <img src={AridsImage} alt="Aridos" />
+            <img src={CementImage} alt="Cemento" />
           </div>
           <div className={styles.text_wrapper}>
             <h3>
-              Características del Hormigón Premezclado: Resistencia, Durabilidad y Calidad
+              Tipos de Cemento y Soluciones para Obras Exigentes
             </h3>
             <p>
-              Nuestro hormigón premezclado se destaca por su alta resistencia y durabilidad. Ideal para todo tipo de proyectos de construcción, garantiza resultados óptimos y duraderos.
+              Ofrecemos distintos tipos de cemento adaptados a proyectos residenciales, comerciales e industriales. Nuestra prioridad es entregar calidad, resistencia y confianza.
             </p>
             <div className={styles.text_box}>
               <div>
-                <h5>Resistencia</h5>
+                <h5>Variedad disponible</h5>
                 <span>
-                  Ofrecemos hormigón con resistencia a compresión que supera los estándares del mercado.
+                  Portland, resistente a sulfatos y cemento blanco.
                 </span>
               </div>
               <div>
-                <h5>Durabilidad</h5>
+                <h5>Aplicaciones múltiples</h5>
                 <span>
-                  Nuestro hormigón es resistente a condiciones climáticas adversas y al desgaste.
+                  Ideal para estructuras, morteros, pavimentos y terminaciones.
                 </span>
               </div>
             </div>
@@ -50,23 +50,23 @@ const AridsService = () => {
         <Wrapper>
           <div className={styles.text_wrapper}>
             <h3>
-              ¿Cómo adquirir tus áridos con nosotros?
+              Acompañamos tu proyecto desde el pedido hasta la colocación
             </h3>
             <div className={styles.steps_wrapper}>
               <InfoCell
                 image={TruckIcon}
-                title="Despacho rápido en obra"
-                description="Llevamos el árido directamente donde lo necesitas, en sacos o a granel."
+                title="Despacho de distintos formatos"
+                description="Bolsas desde 25 hasta 42.5 kg"
               />
               <InfoCell
                 image={CallIcon}
-                title="Asesoría sobre los materiales"
-                description="Te ayudamos a elegir el árido adecuado según el uso y la granulometría."
+                title="Asesoría técnica personalizada"
+                description="Recomendaciones de mezcla y resistencia según clima y uso."
               />
               <InfoCell
                 image={Constructor}
-                title="Áridos listos para uso inmediato."
-                description="Materiales limpios, cribados y con estándar de calidad constante."
+                title="Habla con nuestro equipo técnico"
+                description="Contáctanos para obtener más información sobre nuestro cemento y servicios de entrega."
               />
             </div>
           </div>
@@ -80,4 +80,4 @@ const AridsService = () => {
   )
 }
 
-export default AridsService
+export default CementService
