@@ -4,12 +4,14 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { ConfigProvider } from 'antd';
 import 'antd/dist/antd.less';
-import { CookiesProvider } from './contexts/CookiesContext.jsx';
+import { CookiesProvider } from './contexts/CookiesContext.jsx'
+import ScrollToTop from './components/scroll-to-top.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <ConfigProvider>
       <CookiesProvider>
+        <ScrollToTop/>
         <App />
       </CookiesProvider>
     </ConfigProvider>
