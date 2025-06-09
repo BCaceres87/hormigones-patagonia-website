@@ -1,0 +1,46 @@
+@use "../styles/main.scss" as *;
+
+.container {
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+    @include media-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @include media-large {
+        gap: 1.5rem;
+        width: 45%;
+      }
+
+      button {
+        width: fit-content;
+        align-self: flex-end;
+        @include media-large {
+          align-self: flex-start;
+        }
+      }
+    }
+
+    .image_wrapper {
+      width: 100%;
+      margin-top: 1rem;
+
+      @include media-large {
+        margin-top: 0;
+        width: 45%;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }  
+}
