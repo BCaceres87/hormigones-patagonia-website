@@ -5,7 +5,7 @@ import { Button } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import styles from './services.module.scss'
 import Hormigon from '../assets/images/hormigon1.jpg'
-import Dry from '../assets/images/dry1.png'
+import Arid from '../assets/images/arid1.png'
 import Cement from '../assets/images/cement1.jpg'
 import Machinery from '../assets/images/machinery1.jpg'
 import { useNavigate } from 'react-router-dom'
@@ -41,7 +41,7 @@ const Services = () => {
       <section className={styles.section2}>
         <Wrapper>
           <div className={styles.image_wrapper}>
-            <img src={Dry} alt="Dry image" />
+            <img src={Arid} alt="Arid image" />
           </div>
           <div className={styles.text_wrapper}>
             <strong>Áridos</strong>
@@ -51,7 +51,7 @@ const Services = () => {
             <p>
               Ofrecemos una amplia gama de áridos para satisfacer todas tus necesidades de construcción. Desde gravilla hasta arena, garantizamos materiales de alta calidad y entrega oportuna.
             </p>
-            {/* <Button type="primary"> Ver más <RightOutlined /></Button> */}
+            <Button type="primary" onClick={() => navigate('/services/arids')}> Ver más <RightOutlined /></Button>
           </div>
         </Wrapper>
       </section>

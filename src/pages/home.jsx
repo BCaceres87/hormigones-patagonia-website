@@ -42,41 +42,41 @@ const Home = () => {
        <Wrapper>
          <h3>Nuestros servicios: materiales y maquinaria para construcción de calidad</h3>
          <div className={styles.cards_wrapper}>
-           <Card
-             image={Services}
-             title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Ofrecemos hormigón premezclado de alta calidad para tus obras."
-             linkText="Nuestros servicios"
-             path="/services"
-           />
-           <Card
-             image={Arid}
-             title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Disponemos de gravilla, arena y otros áridos para tus necesidades."
-            //  linkText="Nuestros áridos"
-            //  path="
-           />  
-           <Card
-             image={Cement}
-             title="Soluciones efectivas para todos tus proyectos de construcción"
-             description="Proporcionamos cemento que cumple con los más altos estándares."
-             linkText="Nuestros proyectos"
-             path="/projects"
-           />
+          <Card
+            image={Services}
+            title="Soluciones efectivas para todos tus proyectos de construcción"
+            description="Ofrecemos hormigón premezclado de alta calidad para tus obras."
+            linkText="Nuestros servicios"
+            path="/services"
+          />
+          <Card
+            image={Arid}
+            title="Soluciones efectivas para todos tus proyectos de construcción"
+            description="Disponemos de gravilla, arena y otros áridos para tus necesidades."
+             linkText="Nuestros áridos"
+             path="/services/arids"
+          />  
+          <Card
+            image={Cement}
+            title="Soluciones efectivas para todos tus proyectos de construcción"
+            description="Proporcionamos cemento que cumple con los más altos estándares."
+            linkText="Nuestros proyectos"
+            path="/projects"
+          />
          </div>
        </Wrapper>
       </section>
       <section className={styles.section4}>
        <Wrapper>
         <div className={styles.content_wrapper}>
-           <img src={Img1} alt="Imagen camión" />
-           <div className={styles.text_wrapper}>
-             <h2>Confiabilidad en cada proyecto de construcción</h2>
-             <p>
-               En Hormigones Patagonia, nuestra misión es proporcionar materiales de construcción de la más alta calidad, asegurando entregas puntuales y un servicio al cliente excepcional. Nuestra visión es ser la empresa líder en el sector, reconocida por nuestra integridad y compromiso con la satisfacción del cliente.
-             </p>
-             <Link to="/about">Saber más <RightOutlined /></Link>
-           </div>
+          <img src={Img1} alt="Imagen camión" />
+          <div className={styles.text_wrapper}>
+            <h2>Confiabilidad en cada proyecto de construcción</h2>
+            <p>
+              En Hormigones Patagonia, nuestra misión es proporcionar materiales de construcción de la más alta calidad, asegurando entregas puntuales y un servicio al cliente excepcional. Nuestra visión es ser la empresa líder en el sector, reconocida por nuestra integridad y compromiso con la satisfacción del cliente.
+            </p>
+            <Link to="/about">Saber más <RightOutlined /></Link>
+          </div>
         </div>
        </Wrapper>
       </section>
