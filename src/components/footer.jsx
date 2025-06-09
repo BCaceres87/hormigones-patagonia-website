@@ -10,10 +10,6 @@ const Footer = () => {
       <Link
         className={styles.logo_wrapper}
         to='/'
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
       >
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>

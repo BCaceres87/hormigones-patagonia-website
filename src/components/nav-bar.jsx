@@ -24,10 +24,6 @@ const NavBar = () => {
       <Link
         className={styles.logo_wrapper}
         to='/'
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
       >
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
@@ -36,10 +32,6 @@ const NavBar = () => {
           <Link
             activeclass="active"
             to='/'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
           >
             Home
           </Link>
@@ -47,11 +39,7 @@ const NavBar = () => {
         <li>
           <Link
             activeclass="active"
-            to= '/projects'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            to='/projects'
           >
             Proyectos
           </Link>
@@ -59,11 +47,7 @@ const NavBar = () => {
         <li>
           <Link
             activeclass="active"
-            to= '/services'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            to='/services'
           >
             Servicios
           </Link>
@@ -72,10 +56,6 @@ const NavBar = () => {
           <Link
             activeclass="active"
             to='/about'
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
           >
             Nosotros
           </Link>
