@@ -56,7 +56,7 @@ const NavBar = () => {
             Proyectos
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link
             activeclass="active"
             to= '/services'
@@ -67,7 +67,7 @@ const NavBar = () => {
           >
             Servicios
           </Link>
-        </li>*/}
+        </li>
         <li>
           <Link
             activeclass="active"
