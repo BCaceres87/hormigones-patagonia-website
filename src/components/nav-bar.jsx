@@ -28,46 +28,53 @@ const NavBar = () => {
         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
       </Link>
       <ul className={classNames(styles.list, { [styles.visible]: showMenu })}>
-        <li>
-          <Link
-            activeclass="active"
-            to='/'
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeclass="active"
-            to='/projects'
-          >
-            Proyectos
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeclass="active"
-            to='/services'
-          >
-            Servicios
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeclass="active"
-            to='/about'
-          >
-            Nosotros
-          </Link>
-        </li> 
-        <li>
-          <Button
-            type="primary"
-            onClick={() => navigate('/contact')}
-          >
-            Contacto
-          </Button>
-        </li>
+          <li>
+            <Link
+              activeclass="active"
+              to='/'
+              onClick={() => setShowMenu(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeclass="active"
+              to='/projects'
+              onClick={() => setShowMenu(false)}
+            >
+              Proyectos
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeclass="active"
+              to='/services'
+              onClick={() => setShowMenu(false)}
+            >
+              Servicios
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeclass="active"
+              to='/about'
+              onClick={() => setShowMenu(false)}
+            >
+              Nosotros
+            </Link>
+          </li> 
+          <li>
+            <Button
+              type="primary"
+              onClick={() => {
+                navigate('/contact')
+                setShowMenu(false)
+              }}
+            >
+              Contacto
+            </Button>
+          </li>
       </ul>
       <div className={styles.toggle_menu} onClick={menuToggle}>
         {showMenu ?
