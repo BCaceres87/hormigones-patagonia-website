@@ -13,7 +13,6 @@ import styles from './projects.module.scss'
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false)
-  console.log("showAll: ", showAll);
 
   const allProjects = [
     {
