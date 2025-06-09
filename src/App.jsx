@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/privacy-policy'
 import HormigonService from './pages/hormigon-service'
 import AridsService from './pages/arids-service'
 import CementService from './pages/cement-service'
+import MachineryService from './pages/machinery-service'
 
 export const App = () => {
   return (
@@ -34,6 +35,7 @@ export const App = () => {
         <Route path="/services/hormigon" element={<HormigonService/>}/>
         <Route path="/services/arids" element={<AridsService/>}/>
         <Route path="/services/cement" element={<CementService/>}/>
+        <Route path="/services/machinery" element={<MachineryService/>}/>
       </Routes>
     </Layout>
     <ToastContainer />

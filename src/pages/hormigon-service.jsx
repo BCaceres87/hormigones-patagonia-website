@@ -12,6 +12,7 @@ import ContactRequestSection from '../components/contact-request-section'
 const HormigonService = () => {
 
   return (
+    
     <>
       <PageHeader
         backgroundImage={HormigonImage}
@@ -77,7 +78,7 @@ const HormigonService = () => {
         title="Solicita tu presupuesto hoy"
         description="Contáctanos para obtener más información sobre nuestro hormigón premezclado y servicios de entrega."
       />
-     </>
+    </>
   )
 }
 
