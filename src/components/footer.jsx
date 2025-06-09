@@ -7,47 +7,47 @@ const Footer = () => {
   return (
     <footer>
      <div className={styles.links_container}>
-       <Link
-         className={styles.logo_wrapper}
-         to='/'
-         spy={true}
-         smooth={true}
-         offset={50}
-         duration={500}
-       >
-         <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
-       </Link>
-       <ul className={styles.links_wrapper}>
-         <li>
-           <Link to="/contact">Contacto Rápido</Link>
-         </li>
-         {/* <li>
-           <Link to="/services">Nuestros Servicios</Link>
-         </li> */}
-         <li>
-           <Link to="/projects">Proyectos Destacados</Link>
-         </li>
-         <li>
-           <Link to="/about">Quiénes Somos</Link>
-         </li>
-       </ul>
-       <ul className={styles.social_icons_wrapper}>
-         <li>
-           <Link><FacebookOutlined /></Link>
-         </li>
-         <li>
-           <Link><InstagramOutlined /></Link>
-         </li>
-         <li>
-           <Link><XOutlined /></Link>
-         </li>
-         <li>
-           <Link><LinkedinOutlined /></Link>
-         </li>
-         <li>
-           <Link><YoutubeOutlined /></Link>
-         </li>
-       </ul>
+      <Link
+        className={styles.logo_wrapper}
+        to='/'
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+      >
+        <img className={styles.logo} alt="Patagonia Logo" src={Logo}/>
+      </Link>
+      <ul className={styles.links_wrapper}>
+        <li>
+          <Link to="/contact">Contacto Rápido</Link>
+        </li>
+        <li>
+          <Link to="/services">Nuestros Servicios</Link>
+        </li>
+        <li>
+          <Link to="/projects">Proyectos Destacados</Link>
+        </li>
+        <li>
+          <Link to="/about">Quiénes Somos</Link>
+        </li>
+      </ul>
+      <ul className={styles.social_icons_wrapper}>
+        <li>
+          <Link><FacebookOutlined /></Link>
+        </li>
+        <li>
+          <Link><InstagramOutlined /></Link>
+        </li>
+        <li>
+          <Link><XOutlined /></Link>
+        </li>
+        <li>
+          <Link><LinkedinOutlined /></Link>
+        </li>
+        <li>
+          <Link><YoutubeOutlined /></Link>
+        </li>
+      </ul>
      </div>
      <div className={styles.policies_wrapper}>
       <ul>
