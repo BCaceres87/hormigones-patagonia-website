@@ -1,0 +1,88 @@
+@use "../styles/main.scss" as *;
+
+@use "../styles/main.scss" as *;
+
+.section1 {
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+    @include media-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @include media-large {
+        gap: 1.5rem;
+        width: 45%;
+      }
+      
+      .text_box {
+        display: flex;
+        @include media-large {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          @include media-large {
+            width: 45%;
+          }
+        }
+    
+        h5 {
+          text-align: center;
+          @include media-large {
+            text-align: left;
+          }
+        }     
+      }
+    }
+
+    .image_wrapper {
+      width: 100%;
+      margin-top: 1rem;
+
+      @include media-large {
+        margin-top: 0;
+        width: 45%;
+      }
+
+      img {
+        border-radius: 10px;
+        height: 280px;
+        object-fit: cover;
+        width: 100%;
+        @include media-large {
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+.section2 {
+  .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .steps_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    @include media-large {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

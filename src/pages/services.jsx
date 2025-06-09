@@ -101,7 +101,7 @@ const Services = () => {
               <p>
                 Nuestro servicio de arriendo de maquinaria ofrece equipos de alta calidad, como retroexcavadoras y minicargadores, ideales para cualquier proyecto de construcción. Garantizamos entregas puntuales y un mantenimiento constante para asegurar el mejor rendimiento. Con nosotros, tendrás la confianza de contar con la maquinaria adecuada para llevar a cabo tus obras.
               </p>
-              {/* <Button type="primary"> Ver más <RightOutlined /></Button> */}
+              <Button type="primary" onClick={() => navigate('/services/machinery')}> Ver más <RightOutlined /></Button>
             </div>
           </div>
           <div className={styles.image_wrapper}>
