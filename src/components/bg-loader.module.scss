@@ -1,0 +1,51 @@
+@use "../styles/main.scss" as *;
+
+.skeleton {
+  background-image: none !important;
+  background-color: $neutral-200;
+  position: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+}
+
+.bgSkeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: $neutral-200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: $trendy-green-400;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.bgSkeleton__spinner {
+  width: 48px;
+  height: 48px;
+  border: 7px solid $neutral-200;
+  border-top: 7px solid $trendy-green-400;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+  @media (min-width: 768px) {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -8,34 +8,20 @@ import CallIcon from '../assets/icons/call.svg'
 import TruckIcon from '../assets/icons/tabler_truck-delivery.svg'
 import Constructor from '../assets/icons/mdi_construction-outline.svg'
 import ContactRequestSection from '../components/contact-request-section'
-import { useState, useEffect } from "react";
 
 const AridsService = () => {
-  const [bgLoaded, setBgLoaded] = useState(false);
-  useEffect(() => {
-    const img = new window.Image();
-    img.src = AridsBackground;
-    img.onload = () => setBgLoaded(true);
-  }, []);
+ 
   return (
     <>
-      <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
-        {!bgLoaded && (
-          <div className={styles.bgSkeleton}>
-            <div className={styles.bgSkeleton__spinner}></div>
-            <span>Preparando tu experiencia...</span>
-          </div>
-        )}
-      </div>
       <PageHeader
         backgroundImage={AridsBackground}
         title="Nuestros áridos"
         subtitle="Gravilla, arena, estabilizado y más, para satisfacer los requerimientos de tu obra."
       />
-      <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
+      <section className={styles.section1}>
         <Wrapper>
           <div className={styles.image_wrapper}>
-            <img src={AridsImage} alt="Aridos" loading="lazy" />
+            <img src={AridsImage} alt="Áridos" loading="lazy" />
           </div>
           <div className={styles.text_wrapper}>
             <h3>
@@ -61,7 +47,7 @@ const AridsService = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section2} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
+      <section className={styles.section2}>
         <Wrapper>
           <div className={styles.text_wrapper}>
             <h3>

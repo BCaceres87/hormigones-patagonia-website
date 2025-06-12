@@ -12,6 +12,7 @@ import { Button } from "antd"
 import ContactContent from "../components/contact-content"
 import LogosSection from "../components/logos-section"
 import HomeBackground from '../assets/images/bg1.webp'
+import BgLoader from "../components/bg-loader";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,12 +27,7 @@ const Home = () => {
   return (
     <>
       <header className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
-        {!bgLoaded && (
-          <div className={styles.bgSkeleton}>
-            <div className={styles.bgSkeleton__spinner}></div>
-            <span>Preparando tu experiencia...</span>
-          </div>
-        )}
+        <BgLoader visible={!bgLoaded} />
         <Wrapper>
           <div className={styles.text_wrapper} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
             <h1>Hormigones Patagonia: calidad y confianza</h1>
