@@ -38,8 +38,8 @@ const ContactForm = () => {
         toast.error('Hubo un error al enviar el mensaje');
       }
     }, (error) => {
-      toast.error('Hubo un error al enviar el mensaje, por favor intenta nuevamente');
-      console.log('error', error)
+      toast.error('Ocurrió un error al enviar el mensaje, por favor intenta nuevamente. Si el problema persiste, escribe directamente a   constructorahbspa@gmail.com');
+      console.error('error', error)
     });
   };
 
@@ -90,9 +90,9 @@ const ContactForm = () => {
            rules={[
             {
               validator: () => {
-                return phoneNumber.length === 9
+                return phoneNumber.length === 8
                   ? Promise.resolve()
-                  : Promise.reject('Ingresa 9 dígitos numéricos');
+                  : Promise.reject('Ingresa 8 dígitos numéricos');
               },
             },
             {
@@ -104,8 +104,8 @@ const ContactForm = () => {
           <Input
             addonBefore="+569"
             className={styles.input}
-            placeholder="912345678"
-            maxLength={9}
+            placeholder="12345678"
+            maxLength={8}
             value={phoneNumber}
             onChange={handlePhoneChange}
             inputMode="numeric"
