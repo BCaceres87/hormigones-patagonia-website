@@ -23,20 +23,22 @@ const Services = () => {
 
   return (
     <>
-      <PageHeader
-        backgroundImage={ServicesImage}
-        title="Nuestros Servicios"
-        subtitle="Ofrecemos materiales de construcción de calidad y maquinaria para todos tus proyectos."
-      />
-      <section className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+      <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
         {!bgLoaded && (
           <div className={styles.bgSkeleton}>
             <div className={styles.bgSkeleton__spinner}></div>
             <span>Preparando tu experiencia...</span>
           </div>
         )}
+      </div>
+      <PageHeader
+        backgroundImage={ServicesImage}
+        title="Nuestros Servicios"
+        subtitle="Ofrecemos materiales de construcción de calidad y maquinaria para todos tus proyectos."
+      />
+      <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
-          <div className={styles.text_wrapper} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
+          <div className={styles.text_wrapper}>
             <strong>Hormigón</strong>
             <h2>
               Venta de Hormigón: Calidad y eficiencia para tus proyectos de construcción
@@ -51,7 +53,7 @@ const Services = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section2}>
+      <section className={styles.section2} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.image_wrapper}>
             <img src={Arid} alt="Arid image" loading="lazy" />
@@ -68,7 +70,7 @@ const Services = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section3}>
+      <section className={styles.section3} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.text_wrapper}>
             <strong>Cemento</strong>
@@ -102,7 +104,7 @@ const Services = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section4}>
+      <section className={styles.section4} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.text_wrapper}>
             <div className={styles.title_wrapper}>

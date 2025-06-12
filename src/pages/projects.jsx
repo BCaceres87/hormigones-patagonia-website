@@ -40,18 +40,20 @@ const Projects = () => {
 
   return (
     <>
-      <PageHeader 
-        backgroundImage={ProjectsImage}
-        title="Proyectos Destacados"
-        subtitle="Explora nuestra variedad de proyectos exitosos."
-      />
-      <section className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+      <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
         {!bgLoaded && (
           <div className={styles.bgSkeleton}>
             <div className={styles.bgSkeleton__spinner}></div>
             <span>Preparando tu experiencia...</span>
           </div>
         )}
+      </div>
+      <PageHeader 
+        backgroundImage={ProjectsImage}
+        title="Proyectos Destacados"
+        subtitle="Explora nuestra variedad de proyectos exitosos."
+      />
+      <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           {projectsToDisplay.map((project, index) => (
             <ProjectCard

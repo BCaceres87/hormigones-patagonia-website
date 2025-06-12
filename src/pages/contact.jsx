@@ -16,18 +16,20 @@ const Contact = () => {
 
   return (
    <>
-    <PageHeader 
-      backgroundImage={ContactImage}
-      title="Estamos aquí para ayudarte"
-      subtitle="No dudes en ponerte en contacto con nosotros para cualquier consulta o solicitud de materiales."
-    />
-    <section className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+    <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
       {!bgLoaded && (
         <div className={styles.bgSkeleton}>
           <div className={styles.bgSkeleton__spinner}></div>
           <span>Preparando tu experiencia...</span>
         </div>
       )}
+    </div>
+    <PageHeader 
+      backgroundImage={ContactImage}
+      title="Estamos aquí para ayudarte"
+      subtitle="No dudes en ponerte en contacto con nosotros para cualquier consulta o solicitud de materiales."
+    />
+    <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
       <div>
         <Wrapper>
           <ContactContent/>

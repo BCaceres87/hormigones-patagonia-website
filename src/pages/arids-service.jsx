@@ -19,11 +19,6 @@ const AridsService = () => {
   }, []);
   return (
     <>
-      <PageHeader
-        backgroundImage={AridsBackground}
-        title="Nuestros áridos"
-        subtitle="Gravilla, arena, estabilizado y más, para satisfacer los requerimientos de tu obra."
-      />
       <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
         {!bgLoaded && (
           <div className={styles.bgSkeleton}>
@@ -32,6 +27,11 @@ const AridsService = () => {
           </div>
         )}
       </div>
+      <PageHeader
+        backgroundImage={AridsBackground}
+        title="Nuestros áridos"
+        subtitle="Gravilla, arena, estabilizado y más, para satisfacer los requerimientos de tu obra."
+      />
       <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.image_wrapper}>

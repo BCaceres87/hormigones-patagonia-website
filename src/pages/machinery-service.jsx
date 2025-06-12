@@ -19,11 +19,6 @@ const MachineryService = () => {
   }, []);
   return (
     <>
-      <PageHeader
-        backgroundImage={MachineryBackground}
-        title="Arriendo de Maquinaria"
-        subtitle="Retroexcavadora, minicargador y autohormigonera disponibles para proyectos exigentes."
-      />
       <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
         {!bgLoaded && (
           <div className={styles.bgSkeleton}>
@@ -32,6 +27,11 @@ const MachineryService = () => {
           </div>
         )}
       </div>
+      <PageHeader
+        backgroundImage={MachineryBackground}
+        title="Arriendo de Maquinaria"
+        subtitle="Retroexcavadora, minicargador y autohormigonera disponibles para proyectos exigentes."
+      />
       <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.image_wrapper}>

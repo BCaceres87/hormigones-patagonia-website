@@ -19,11 +19,6 @@ const CementService = () => {
   }, []);
   return (
     <>
-      <PageHeader
-        backgroundImage={CementBackground}
-        title="Cemento de alto rendimiento"
-        subtitle="Entrega rápida y asesoría técnica para cada tipo de obra."
-      />
       <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
         {!bgLoaded && (
           <div className={styles.bgSkeleton}>
@@ -32,6 +27,11 @@ const CementService = () => {
           </div>
         )}
       </div>
+      <PageHeader
+        backgroundImage={CementBackground}
+        title="Cemento de alto rendimiento"
+        subtitle="Entrega rápida y asesoría técnica para cada tipo de obra."
+      />
       <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.image_wrapper}>
