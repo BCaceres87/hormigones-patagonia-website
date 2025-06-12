@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import PageHeader from '../components/page-header'
-import ProjectsImage from '../assets/images/projects_background.jpg'
+import ProjectsImage from '../assets/images/projects_background.webp'
 import ProjectCard from '../components/project-card'
-import AchaoProject1 from '../assets/images/achao_project1.jpeg'
-import AchaoProject2 from '../assets/images/achao_project2.jpeg'
-import AchaoProject3 from '../assets/images/achao_project3.jpeg'
-import PuertoOctayProject1 from '../assets/images/puerto_octay_project1.jpg'
+import AchaoProject1 from '../assets/images/achao_project1.webp'
+import AchaoProject2 from '../assets/images/achao_project2.webp'
+import AchaoProject3 from '../assets/images/achao_project3.webp'
+import PuertoOctayProject1 from '../assets/images/puerto_octay_project1.webp'
 import Wrapper from '../components/wrapper'
 import LogosSection from '../components/logos-section'
 import { Button } from 'antd';
@@ -64,4 +64,4 @@ const Projects = () => {
   );
 };
 
-export default Projects 
+export default Projects

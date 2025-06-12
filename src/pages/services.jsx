@@ -1,13 +1,13 @@
 import PageHeader from '../components/page-header'
-import ServicesImage from '../assets/images/services_background.jpg'
+import ServicesImage from '../assets/images/services_background.webp'
 import Wrapper from '../components/wrapper'
 import { Button } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 import styles from './services.module.scss'
-import Hormigon from '../assets/images/hormigon1.jpg'
-import Arid from '../assets/images/arid1.png'
-import Cement from '../assets/images/cement1.jpg'
-import Machinery from '../assets/images/machinery1.jpg'
+import Hormigon from '../assets/images/hormigon1.webp'
+import Arid from '../assets/images/arid1.webp'
+import Cement from '../assets/images/cement1.webp'
+import Machinery from '../assets/images/machinery1.webp'
 import { useNavigate } from 'react-router-dom'
 
 const Services = () => {
