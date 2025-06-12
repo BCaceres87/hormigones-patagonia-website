@@ -6,15 +6,23 @@ import LogosSection from '../components/logos-section'
 import AboutCard from '../components/about-card'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import AboutImage from '../assets/images/about_background.png'
+import AboutImage from '../assets/images/about_background.webp'
 import PageHeader from '../components/page-header'
+import { useState, useEffect } from "react";
 
 const About = () => {
   const navigate = useNavigate();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
-  })
+  });
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = AboutImage;
+    img.onload = () => setBgLoaded(true);
+  }, []);
 
   return (
     <>
@@ -23,9 +31,17 @@ const About = () => {
         title="Conócenos"
         subtitle="Hormigones Patagonia, su aliado en materiales de construcción de calidad y servicio excepcional en cada proyecto."
       />
-      <LogosSection title="Empresas que confían en nosotros"/>
-      <section>
+      <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
+        {!bgLoaded && (
+          <div className={styles.bgSkeleton}>
+            <div className={styles.bgSkeleton__spinner}></div>
+            <span>Preparando tu experiencia...</span>
+          </div>
+        )}
+      </div>
+      <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
+          <LogosSection title="Empresas que confían en nosotros"/>
           <AboutCard/>
         </Wrapper>
       </section>

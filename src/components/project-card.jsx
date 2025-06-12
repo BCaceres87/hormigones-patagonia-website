@@ -14,7 +14,7 @@ const ProjectCard = ({ images, title, description, tags }) => {
       <Carousel effect="fade" ref={carouselRef}>
         {images.map((image, index) => (
           <div key={index} classsName={styles.image_wrapper}>
-            <img src={image} alt="Image" className={styles.image}/>
+            <img src={image} alt="Image" className={styles.image} loading="lazy"/>
           </div>
         ))}
       </Carousel>

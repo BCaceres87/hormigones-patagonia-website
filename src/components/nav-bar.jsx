@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
-import Logo from '../assets/logos/logo_navbar.png'
+import Logo from '../assets/logos/logo_navbar.webp'
 import styles from './nav-bar.module.scss'
 import { Button } from 'antd';
 

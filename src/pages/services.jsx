@@ -9,9 +9,17 @@ import Arid from '../assets/images/arid1.webp'
 import Cement from '../assets/images/cement1.webp'
 import Machinery from '../assets/images/machinery1.webp'
 import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from "react";
 
 const Services = () => {
   const navigate = useNavigate();
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = '/src/assets/images/services_background.webp';
+    img.onload = () => setBgLoaded(true);
+  }, []);
 
   return (
     <>
@@ -20,9 +28,15 @@ const Services = () => {
         title="Nuestros Servicios"
         subtitle="Ofrecemos materiales de construcción de calidad y maquinaria para todos tus proyectos."
       />
-      <section className={styles.section1}>
+      <section className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+        {!bgLoaded && (
+          <div className={styles.bgSkeleton}>
+            <div className={styles.bgSkeleton__spinner}></div>
+            <span>Preparando tu experiencia...</span>
+          </div>
+        )}
         <Wrapper>
-          <div className={styles.text_wrapper}>
+          <div className={styles.text_wrapper} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
             <strong>Hormigón</strong>
             <h2>
               Venta de Hormigón: Calidad y eficiencia para tus proyectos de construcción
@@ -33,14 +47,14 @@ const Services = () => {
             <Button type="primary" onClick={() => navigate('/services/hormigon')}> Ver más <RightOutlined /></Button>
           </div>
           <div className={styles.image_wrapper}>
-            <img src={Hormigon} alt="Hormigon image" />
+            <img src={Hormigon} alt="Hormigon image" loading="lazy" />
           </div>
         </Wrapper>
       </section>
       <section className={styles.section2}>
         <Wrapper>
           <div className={styles.image_wrapper}>
-            <img src={Arid} alt="Arid image" />
+            <img src={Arid} alt="Arid image" loading="lazy" />
           </div>
           <div className={styles.text_wrapper}>
             <strong>Áridos</strong>
@@ -84,7 +98,7 @@ const Services = () => {
             <Button type="primary" onClick={() => navigate('/services/cement')}> Ver más <RightOutlined /></Button>
           </div>
           <div className={styles.image_wrapper}>
-            <img src={Cement} alt="Cement image" />
+            <img src={Cement} alt="Cement image" loading="lazy" />
           </div>
         </Wrapper>
       </section>
@@ -105,7 +119,7 @@ const Services = () => {
             </div>
           </div>
           <div className={styles.image_wrapper}>
-            <img src={Machinery} alt="Machinery image" />
+            <img src={Machinery} alt="Machinery image" loading="lazy" />
           </div>
         </Wrapper>
       </section>

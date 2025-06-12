@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react"
 import Wrapper from '../components/wrapper'
-import CementBackground from '../assets/images/cement_background.jpg'
-import CementImage from '../assets/images/cement1.jpg'
+import CementBackground from '../assets/images/cement_background.webp'
+import CementImage from '../assets/images/cement1.webp'
 import InfoCell from '../components/info-cell'
 import CallIcon from '../assets/icons/call.svg'
 import TruckIcon from '../assets/icons/tabler_truck-delivery.svg'
@@ -10,6 +11,12 @@ import styles from './cement-service.module.scss'
 import PageHeader from '../components/page-header'
 
 const CementService = () => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = CementBackground;
+    img.onload = () => setBgLoaded(true);
+  }, []);
   return (
     <>
       <PageHeader
@@ -17,7 +24,15 @@ const CementService = () => {
         title="Cemento de alto rendimiento"
         subtitle="Entrega rápida y asesoría técnica para cada tipo de obra."
       />
-      <section className={styles.section1}>
+      <div className={styles.skeleton + (!bgLoaded ? ' ' + styles.skeleton : '')} style={!bgLoaded ? {position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 10000} : {display: 'none'}}>
+        {!bgLoaded && (
+          <div className={styles.bgSkeleton}>
+            <div className={styles.bgSkeleton__spinner}></div>
+            <span>Preparando tu experiencia...</span>
+          </div>
+        )}
+      </div>
+      <section className={styles.section1} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.image_wrapper}>
             <img src={CementImage} alt="Cemento" />
@@ -46,7 +61,7 @@ const CementService = () => {
           </div>
         </Wrapper>
       </section>
-      <section className={styles.section2}>
+      <section className={styles.section2} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
         <Wrapper>
           <div className={styles.text_wrapper}>
             <h3>

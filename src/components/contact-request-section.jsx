@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import Contract from '../assets/images/contract.jpg'
+import Contract from '../assets/images/contract.webp'
 import styles from './contact-request-section.module.scss'
 import Wrapper from "./wrapper"
 import { Button } from "antd"

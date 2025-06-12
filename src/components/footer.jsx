@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Logo from '../assets/logos/logo_footer.png'
+import Logo from '../assets/logos/logo_footer.webp'
 import styles from './footer.module.scss'
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, XOutlined, YoutubeOutlined } from "@ant-design/icons"
 

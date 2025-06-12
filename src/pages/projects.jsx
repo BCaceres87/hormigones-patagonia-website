@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import PageHeader from '../components/page-header'
 import ProjectsImage from '../assets/images/projects_background.webp'
 import ProjectCard from '../components/project-card'
@@ -13,6 +13,13 @@ import styles from './projects.module.scss'
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false)
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = '/src/assets/images/projects_background.webp';
+    img.onload = () => setBgLoaded(true);
+  }, []);
 
   const allProjects = [
     {
@@ -38,7 +45,13 @@ const Projects = () => {
         title="Proyectos Destacados"
         subtitle="Explora nuestra variedad de proyectos exitosos."
       />
-      <section>
+      <section className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+        {!bgLoaded && (
+          <div className={styles.bgSkeleton}>
+            <div className={styles.bgSkeleton__spinner}></div>
+            <span>Preparando tu experiencia...</span>
+          </div>
+        )}
         <Wrapper>
           {projectsToDisplay.map((project, index) => (
             <ProjectCard

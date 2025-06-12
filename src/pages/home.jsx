@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
+import { useState, useEffect } from "react";
 import styles from './home.module.scss'
-import Services from '../assets/images/card1.jpg'
-import Arid from '../assets/images/card2.jpg'
-import Cement from '../assets/images/card3.jpg'
-import Img1 from '../assets/images/image1.jpg'
+import Services from '../assets/images/card1.webp'
+import Arid from '../assets/images/card2.webp'
+import Cement from '../assets/images/card3.webp'
+import Img1 from '../assets/images/image1.webp'
 import Card from "../components/card"
 import Wrapper from "../components/wrapper"
 import { RightOutlined } from "@ant-design/icons"
@@ -12,12 +13,26 @@ import ContactContent from "../components/contact-content"
 import LogosSection from "../components/logos-section"
 
 const Home = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = '/src/assets/images/bg1.webp';
+    img.onload = () => setBgLoaded(true);
+  }, []);
+
   return (
     <>
-      <header className={styles.section1}>
+      <header className={styles.section1 + (!bgLoaded ? ' ' + styles.skeleton : '')}>
+        {!bgLoaded && (
+          <div className={styles.bgSkeleton}>
+            <div className={styles.bgSkeleton__spinner}></div>
+            <span>Preparando tu experiencia...</span>
+          </div>
+        )}
         <Wrapper>
-          <div className={styles.text_wrapper}>
+          <div className={styles.text_wrapper} style={!bgLoaded ? {visibility: 'hidden'} : {}}>
             <h1>Hormigones Patagonia: calidad y confianza</h1>
             <p>En Hormigones Patagonia, nos dedicamos a ofrecer materiales de construcción de la más alta calidad, garantizando entregas puntuales y un servicio excepcional. Nuestra experiencia y compromiso nos han permitido ganar la confianza de numerosos clientes en el sector.</p>
             <div className={styles.buttons_wrapper}>
@@ -69,7 +84,7 @@ const Home = () => {
       <section className={styles.section4}>
        <Wrapper>
         <div className={styles.content_wrapper}>
-          <img src={Img1} alt="Imagen camión" />
+          <img src={Img1} alt="Imagen camión" loading="lazy" />
           <div className={styles.text_wrapper}>
             <h2>Confiabilidad en cada proyecto de construcción</h2>
             <p>
