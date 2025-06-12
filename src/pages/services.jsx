@@ -17,7 +17,7 @@ const Services = () => {
 
   useEffect(() => {
     const img = new window.Image();
-    img.src = '/src/assets/images/services_background.webp';
+    img.src = ServicesImage;
     img.onload = () => setBgLoaded(true);
   }, []);
 

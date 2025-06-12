@@ -11,6 +11,7 @@ import { RightOutlined } from "@ant-design/icons"
 import { Button } from "antd"
 import ContactContent from "../components/contact-content"
 import LogosSection from "../components/logos-section"
+import HomeBackground from '../assets/images/bg1.webp'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     const img = new window.Image();
-    img.src = '/src/assets/images/bg1.webp';
+    img.src = HomeBackground;
     img.onload = () => setBgLoaded(true);
   }, []);
 

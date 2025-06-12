@@ -10,7 +10,7 @@ const Contact = () => {
 
   useEffect(() => {
     const img = new window.Image();
-    img.src = '/src/assets/images/contact_background.webp';
+    img.src = ContactImage;
     img.onload = () => setBgLoaded(true);
   }, []);
 

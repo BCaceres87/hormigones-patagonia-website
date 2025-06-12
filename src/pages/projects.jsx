@@ -17,7 +17,7 @@ const Projects = () => {
 
   useEffect(() => {
     const img = new window.Image();
-    img.src = '/src/assets/images/projects_background.webp';
+    img.src = ProjectsImage;
     img.onload = () => setBgLoaded(true);
   }, []);
 
